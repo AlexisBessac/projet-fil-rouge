@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Liste des utilisateurs</h1>
     <div>
-            <a href="">Créer un utilisateur</a>
+            <button>Créer un utilisateur</button>
     </div>
     <table class="table">
         <thead>
@@ -27,10 +27,10 @@
         <td><?= $users['code_postal'] ?></td>
         <td><?= $users['ville'] ?></td>
         <td>
-            <a href="">Modifier</a>
+            <button>Modifier</button>
         </td>
         <td>
-           <a href="">Supprimer</a>
+           <button>Supprimer</button>
         </td>
     </tr>
 <?php endforeach; ?>
