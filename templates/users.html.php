@@ -1,5 +1,8 @@
 <div class="container">
     <h1>Liste des utilisateurs</h1>
+    <div>
+            <a href="">Créer un utilisateur</a>
+    </div>
     <table class="table">
         <thead>
             <tr>
