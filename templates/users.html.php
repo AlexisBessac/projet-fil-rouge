@@ -3,6 +3,12 @@
     <div>
             <button>Créer un utilisateur</button>
     </div>
+    <div>
+        <form action="" method="GET">
+            <input type="text" name="search" id="search" placeholder="Rechercher un utilisateur">
+            <button type="submit" name="search_submit">Rechercher</button>
+        </form>
+    </div>
     <table class="table">
         <thead>
             <tr>
