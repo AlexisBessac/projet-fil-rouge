@@ -1,12 +1,12 @@
 <div class="container">
     <h1>Liste des utilisateurs</h1>
     <div>
-        <button>Créer un utilisateur</button>
+        <button class="button">Créer un utilisateur</button>
     </div>
     <div>
-        <form action="" method="GET">
+        <form action="" method="GET" class="search">
             <input type="text" name="search" id="search" placeholder="Rechercher un utilisateur">
-            <button type="submit" name="search_submit">Rechercher</button>
+            <button class="button" type="submit" name="search_submit">Rechercher</button>
         </form>
     </div>
     <table class="table">

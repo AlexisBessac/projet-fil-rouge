@@ -1,7 +1,25 @@
 h1{
     color: #181C8B;
+    text-align: center;
 }
 
-.table{
-    border: 1px solid black;
+.button{
+    color: #fefefe;
+    background-color: #181C8B;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.table, th, tr, td{
+    border: 1px solid #181C8B;
+    margin-top: 10px;
+}
+
+.table th{
+    color: #fefefe;
+    background-color: #181C8B;
 }
