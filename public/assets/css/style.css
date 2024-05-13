@@ -30,20 +30,40 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: end;
+    margin-bottom: 10px;
 }
 
-.table, th, tr, td{
-    border: 1px solid #181C8B;
-    margin-top: 10px;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.table th{
-    color: #fefefe;
+tr:nth-child(even) td {
     background-color: #181C8B;
+    color: #fefefe;
+}
+
+tr:nth-child(odd) td {
+    background-color: #fefefe;
+    color: #181C8B;
+}
+
+
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #181C8B;
+}
+
+th {
+    background-color: #181C8B;
+    color: #fefefe;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .edit-button{
-    background-color: #096a09;
+    background-color: #181C8B;
     color: #fefefe;
 }
 
