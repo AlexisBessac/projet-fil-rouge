@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Liste des utilisateurs</h1>
     <div>
-        <button class="button">Créer un utilisateur</button>
+        <a href="/?page=add-user"><button class="button">Créer un utilisateur</button></a>
     </div>
     <div>
         <form action="" method="GET" class="search">
