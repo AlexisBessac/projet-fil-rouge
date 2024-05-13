@@ -33,12 +33,12 @@
                     <td><?= $users['code_postal'] ?></td>
                     <td><?= $users['ville'] ?></td>
                     <td>
-                        <button>Modifier</button>
+                        <button class="edit-button">Modifier</button>
                     </td>
                     <td>
                         <form action="" method="POST">
                             <input type="hidden" name="user_id" value="<?= $users['id_utilisateur'] ?>" />
-                            <button type="submit">Supprimer</button>
+                            <button class="delete__button" type="submit">Supprimer</button>
                         </form>
                     </td>
                 </tr>

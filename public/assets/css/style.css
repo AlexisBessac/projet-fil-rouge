@@ -1,6 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 h1{
     color: #181C8B;
     text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.error{
+    text-align: center;
+    color: #181C8B;
 }
 
 .button{
@@ -22,4 +40,14 @@ h1{
 .table th{
     color: #fefefe;
     background-color: #181C8B;
+}
+
+.edit-button{
+    background-color: #096a09;
+    color: #fefefe;
+}
+
+.delete__button{
+    background-color: #ff0000;
+    color: #fefefe;
 }
