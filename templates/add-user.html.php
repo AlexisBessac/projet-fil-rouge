@@ -19,6 +19,10 @@
             <input type="password" name="password" id="password">
         </div>
         <div>
+            <label for="phone_number">Téléphone</label>
+            <input type="tel" name="phone_number" id="phone_number">
+        </div>
+        <div>
             <label for="adress">Adresse</label>
             <input type="text" name="adress" id="adress" placeholder="Entrer une adresse">
         </div>
