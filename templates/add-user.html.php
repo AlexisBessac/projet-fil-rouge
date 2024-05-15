@@ -36,6 +36,6 @@
         </div>
     </form>
     <div>
-        <button type="submit" class="button" name="add_user_submit">Enregistrer</button>
+        <button type="submit" class="button" name="add_user_submit">Ajouter</button>
     </div>
 </div>
