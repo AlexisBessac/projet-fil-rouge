@@ -38,10 +38,17 @@
             <?php endif; ?>
         </div>
         <div>
-            <label for="address">Adresse</label>
-            <input type="email" name="address" id="address" placeholder="Entrer une adresse">
-            <?php if (isset($errors) && !empty($errors['address'])) : ?>
-                <div class="ajout-error"><?= $errors['address'] ?></div>
+            <label for="street_number">Numéro</label>
+            <input type="text" name="street_number" id="street_number">
+            <?php if (isset($errors) && !empty($errors['street_number'])) : ?>
+                <div class="ajout-error"><?= $errors['street_number'] ?></div>
+            <?php endif; ?>
+        </div>
+        <div>
+            <label for="street">Rue</label>
+            <input type="text" name="street" id="street" placeholder="Entrer le nom d'une rue">
+            <?php if (isset($errors) && !empty($errors['street'])) : ?>
+                <div class="ajout-error"><?= $errors['street'] ?></div>
             <?php endif; ?>
         </div>
         <div>
@@ -56,6 +63,13 @@
             <input type="text" name="city" id="city" placeholder="Entrer une ville">
             <?php if (isset($errors) && !empty($errors['city'])) : ?>
                 <div class="ajout-error"><?= $errors['city'] ?></div>
+            <?php endif; ?>
+        </div>
+        <div>
+            <label for="role_id">Rôle de l'utilisateur</label>
+            <input type="number" name="role_id" id="role_id">
+            <?php if (isset($errors) && !empty($errors['role_id'])) : ?>
+                <div class="ajout-error"><?= $errors['role_id'] ?></div>
             <?php endif; ?>
         </div>
         <input type="submit" class="button ajout-button" name="add_user_submit" value="Ajouter"></input>

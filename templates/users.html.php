@@ -16,7 +16,8 @@
                 <th>Nom</th>
                 <th>Prénom</th>
                 <th>Email</th>
-                <th>Adresse</th>
+                <th>Numéro</th>
+                <th>Rue</th>
                 <th>Code Postal</th>
                 <th>Ville</th>
                 <th colspan="2">Actions</th>
@@ -46,7 +47,7 @@
             <?php endforeach; ?>
             <?php if (empty($user)) : ?>
                 <tr>
-                    <td colspan="8">Aucun utilisateur présent dans la base de données</td>
+                    <td colspan="9">Aucun utilisateur présent dans la base de données</td>
                 </tr>
             <?php endif; ?>
         </tbody>
