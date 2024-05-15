@@ -1,12 +1,12 @@
 <?php
 
-if(!empty($_POST['id_utilisateur']))
+if(!empty($_POST['user_id']))
 {
     require '../src/data/db-connect.php';
 
     $query = $dbh->prepare("DELETE FROM utilisateur WHERE id_utilisateur = :id_utilisateur");
     $query->execute([
-        'id_utilisateur' => $_POST['id_utilisateur'],
+        'id_utilisateur' => $_POST['user_id'],
     ]);
 }
 
