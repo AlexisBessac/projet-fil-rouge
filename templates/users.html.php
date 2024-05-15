@@ -29,7 +29,8 @@
                     <td><?= $users['nom'] ?></td>
                     <td><?= $users['prenom'] ?></td>
                     <td><?= $users['email'] ?></td>
-                    <td><?= $users['adresse'] ?></td>
+                    <td><?= $users['numero'] ?></td>
+                    <td><?= $users['rue'] ?></td>
                     <td><?= $users['code_postal'] ?></td>
                     <td><?= $users['ville'] ?></td>
                     <td>

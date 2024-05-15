@@ -39,9 +39,9 @@
         </div>
         <div>
             <label for="address">Adresse</label>
-            <input type="text" name="address" id="address" placeholder="Entrer une adresse">
+            <input type="email" name="address" id="address" placeholder="Entrer une adresse">
             <?php if (isset($errors) && !empty($errors['address'])) : ?>
-                <div class="ajout-error"><?= $errors['adress'] ?></div>
+                <div class="ajout-error"><?= $errors['address'] ?></div>
             <?php endif; ?>
         </div>
         <div>

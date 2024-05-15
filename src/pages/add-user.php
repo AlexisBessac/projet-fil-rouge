@@ -10,12 +10,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user_submit']))
 
     if(empty($_POST['firstname']) || strlen($_POST['firstname']) <=1)
     {
-        $errors['firstname'] = "Le champ Prénom est obligatoire et doit contenir au moins un caractère";
+        $errors['firstname'] = "Le champ Prénom est obligatoire et doit contenir plus d'un caractère";
     }
 
     if(empty($_POST['lastname']) || strlen($_POST['lastname']) <=1)
     {
-        $errors['lastname'] = "Le champ Nom est obligatoire et doit contenir au moins un caractère";
+        $errors['lastname'] = "Le champ Nom est obligatoire et doit contenir plus d'un caractère";
     }
 
     if(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
@@ -38,9 +38,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user_submit']))
         $errors['address'] = "Le champ Adresse est obligatoire";
     }
 
-    if($_POST['zip_code'])
+    if(empty($_POST['zip_code']))
     {
-        $errors['zip_cide'] = "Le Code Postal renseigné n'est pas valide";
+        $errors['zip_code'] = "Le Code Postal renseigné n'est pas valide";
+    }
+
+    if(empty($_POST['city']) || strlen($_POST['city']) <=1)
+    {
+        $errors['city'] = "Le champ ville est obligatoire et doit contenir plus d'un caractère";
     }
 
     if(empty($errors))
