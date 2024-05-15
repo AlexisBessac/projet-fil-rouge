@@ -26,6 +26,12 @@ body{
     font-style: normal;
 }
 
+.punchline{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
 .error{
     text-align: center;
     color: #181C8B;
