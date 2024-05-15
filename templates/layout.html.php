@@ -19,7 +19,7 @@
     <main>
         <?php require '../templates/' . $page . '.html.php'; ?>
     </main>
-
+    
     <script src="../assets/js/main.js"></script>
 </body>
 
