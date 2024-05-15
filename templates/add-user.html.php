@@ -1,7 +1,7 @@
 <div class="container">
-    <h1>Ajout d'un utilisateur</h1>
-    <a href="/?page=users"><button class="button">Annuler</button></a>
-    <form action="/?page=add-users" method="POST" class="grid">
+    <h1>Ajouter un utilisateur</h1>
+    <a href="/?page=users"><button class="button cancel-button">Annuler</button></a>
+    <form action="/?page=add-users" method="POST">
         <div>
             <label for="firstname">Prénom</label>
             <input type="text" name="firstname" id="firstname" placeholder="Votre Prénom">
@@ -36,6 +36,6 @@
         </div>
     </form>
     <div>
-        <button type="submit" class="button" name="add_user_submit">Ajouter</button>
+        <button class="button ajout-button" name="add_user_submit">Ajouter</button>
     </div>
 </div>
