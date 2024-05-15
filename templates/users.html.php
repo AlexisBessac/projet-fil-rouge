@@ -36,7 +36,7 @@
                         <button class="edit-button">Modifier</button>
                     </td>
                     <td>
-                        <form action="/?page=delete-users" method="POST" onsubmit="return confirm('Are you sure ?')">
+                        <form action="/?page=delete-user" method="POST" onsubmit="return confirm('Are you sure ?')">
                             <input type="hidden" name="user_id" value="<?= $users['id_utilisateur'] ?>" />
                             <button class="delete__button" type="submit">Supprimer</button>
                         </form>

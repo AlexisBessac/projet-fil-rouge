@@ -31,6 +31,12 @@ body{
     color: #181C8B;
 }
 
+.ajout-error{
+    display: block;
+    color: #ff0000;
+}
+
+
 .button{
     color: #fefefe;
     background-color: #181C8B;
