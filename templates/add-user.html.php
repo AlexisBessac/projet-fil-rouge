@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Ajouter un utilisateur</h1>
+<h1>Ajouter un utilisateur</h1>
     <a href="/?page=users"><button class="button cancel-button">Annuler</button></a>
     <form action="/?page=add-user" method="POST">
         <div>
@@ -38,14 +38,14 @@
             <?php endif; ?>
         </div>
         <div>
-            <label for="street_number">Numéro</label>
+            <label for="street_number">Numéro de la rue</label>
             <input type="text" name="street_number" id="street_number">
             <?php if (isset($errors) && !empty($errors['street_number'])) : ?>
                 <div class="ajout-error"><?= $errors['street_number'] ?></div>
             <?php endif; ?>
         </div>
         <div>
-            <label for="street">Rue</label>
+            <label for="street">Voie</label>
             <input type="text" name="street" id="street" placeholder="Entrer le nom d'une rue">
             <?php if (isset($errors) && !empty($errors['street'])) : ?>
                 <div class="ajout-error"><?= $errors['street'] ?></div>

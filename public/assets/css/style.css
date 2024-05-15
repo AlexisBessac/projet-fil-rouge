@@ -71,13 +71,13 @@ tr:nth-child(odd) td {
 }
 
 
-td {
+td{
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #181C8B;
 }
 
-th {
+th{
     background-color: #181C8B;
     color: #fefefe;
     padding-top: 10px;
@@ -103,4 +103,23 @@ th {
 .cancel-button{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form div {
+    flex: 0 0 50%; /* Répartit les éléments sur deux colonnes */
+    padding: 0 10px; /* Espacement entre les colonnes */
+}
+
+form div label {
+    display: block; /* Affiche les labels sur une ligne */
+}
+
+form div input {
+    width: 100%; /* Ajuste la largeur des champs de saisie */
+    margin-bottom: 10px; /* Espacement entre les champs */
 }
