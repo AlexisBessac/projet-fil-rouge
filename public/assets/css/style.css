@@ -105,6 +105,10 @@ th{
     margin-bottom: 10px;
 }
 
+.text-user{
+    text-align: center;
+}
+
 form {
     display: flex;
     flex-wrap: wrap;
