@@ -28,12 +28,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user_submit']))
         $errors['password'] = "Le champ Mot de passe est obligatoire";
     }
 
-    if(empty($_POST['phone_number']) || !ctype_digit($_POST['phone_number']))
+    if(empty($_POST['phone_number']) || strlen($_POST['phone_number']) <=10 || !ctype_digit($_POST['phone_number']))
     {
         $errors['phone_number'] = "Le numéro de téléphone n'est pas valide";
     }
 
-    if(empty($_POST['street_number']) || strlen($_POST['phone_number']) || !ctype_alnum($_POST['street_number']))
+    if(empty($_POST['street_number']) || !ctype_alnum($_POST['street_number']))
     {
         $errors['street_number'] = "Veuiller renseigner un numéro de rue";
     }
