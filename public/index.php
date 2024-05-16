@@ -8,7 +8,7 @@ $path = '../src/pages/' . $page . '.php';
 if(file_exists($path))
 {
     // Db connect et chargement des variables globales
-
+    
     // Chargement des données pour la page
     require $path;
     // Inclusion du template correspondant à la page

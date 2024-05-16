@@ -47,7 +47,7 @@
             <?php endforeach; ?>
             <?php if (empty($users)) : ?>
                 <tr>
-                    <td colspan="9" classe="text-user">Aucun utilisateur présent dans la base de données</td>
+                    <td colspan="9" class="text-user">Aucun utilisateur présent dans la base de données</td>
                 </tr>
             <?php endif; ?>
         </tbody>
