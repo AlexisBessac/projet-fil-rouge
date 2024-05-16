@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user_submit']))
         $errors['street'] = "Le champ Rue est obligatoire";
     }
 
-    if(empty($_POST['zip_code']))
+    if(empty($_POST['zip_code']) || !ctype_digit($_POST['zip_code']))
     {
         $errors['zip_code'] = "Le Code Postal renseigné n'est pas valide";
     }
