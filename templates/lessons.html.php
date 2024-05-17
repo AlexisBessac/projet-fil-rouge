@@ -43,7 +43,7 @@
             <?php endforeach; ?>
             <?php if (empty($lessons)) : ?>
                 <tr>
-                    <td colspan="7" class="text-user">Aucune formation présente dans la base de données</td>
+                    <td colspan="7" class="text-user">Aucune formation présente dans la base de donnée</td>
                 </tr>
             <?php endif; ?>
         </tbody>
