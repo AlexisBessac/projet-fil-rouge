@@ -1,5 +1,5 @@
 <div class="container">
-<h1>Ajouter un utilisateur</h1>
+    <h1>Ajouter un utilisateur</h1>
     <a href="/?page=users"><button class="button cancel-button">Annuler</button></a>
     <form action="/?page=add-user" method="POST">
         <div>
@@ -66,8 +66,11 @@
             <?php endif; ?>
         </div>
         <div>
-            <label for="role_id">Rôle de l'utilisateur</label>
-            <input type="number" name="role_id" id="role_id">
+            <label for="role_id">Role de l'utilisateur</label>
+            <?php foreach($roles as $role) : ?>
+                <label for="role_id <?= $role['Id_role'] ?>"><?= $role['nom_role'] ?></label>
+                <input type="radio" name="role_id" id="role_id <?= $role['Id_role'] ?>" value="<?= $role['Id_role'] ?>">
+            <?php endforeach; ?>
             <?php if (isset($errors) && !empty($errors['role_id'])) : ?>
                 <div class="ajout-error"><?= $errors['role_id'] ?></div>
             <?php endif; ?>

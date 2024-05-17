@@ -1,7 +1,12 @@
 <?php
 
 $title = "Ajout d'un utilisateur";
-$description = "Formulaire d'ajout d'un utilisateur"; 
+$description = "Formulaire d'ajout d'un utilisateur";
+
+require '../src/data/db-connect.php';
+
+$query = $dbh->query("SELECT * FROM role");
+$roles = $query->fetchAll();
 
 // Vérification de l'envoi du formulaire et des champs
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user_submit']))

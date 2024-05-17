@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Liste des formations</h1>
     <div>
-        <a href="/?page=add-user"><button class="button">Créer une formation</button></a>
+        <a href="/?page=add-lesson"><button class="button">Créer une formation</button></a>
     </div>
     <div>
         <form action="" method="GET" class="search">
