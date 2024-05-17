@@ -60,7 +60,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user_submit']))
 
     if(empty($_POST['role_id']) || !ctype_digit($_POST['role_id']))
     {
-        $errors['role_id'] = "Le champ Rôle doit être un nombre entier";
+        $errors['role_id'] = "Veuiller cocher l'un des trois rôles";
     }
 
     if(empty($errors))
