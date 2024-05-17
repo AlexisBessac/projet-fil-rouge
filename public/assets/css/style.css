@@ -130,7 +130,7 @@ form div input {
     margin-bottom: 10px; /* Espacement entre les champs */
 }
 
-.edit-button{
+.edit_user_button{
     display: block;
     background-color: #181C8B;
     color: #fefefe;

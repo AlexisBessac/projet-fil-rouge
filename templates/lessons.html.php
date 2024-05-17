@@ -35,7 +35,7 @@
                     </td>
                     <td>
                         <form action="" method="POST" onsubmit="return confirm('Are you sure ?')">
-                            <input type="hidden" name="user_id" value="<?= $users['id_utilisateur'] ?>" />
+                            <input type="hidden" name="lesson_id" value="<?= $lessons['id_formation'] ?>" />
                             <button class="delete__button" type="submit">Supprimer</button>
                         </form>
                     </td>

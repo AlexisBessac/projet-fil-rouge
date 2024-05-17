@@ -68,6 +68,6 @@
                 <div class="ajout-error"><?= $errors['role_id'] ?></div>
             <?php endif; ?>
         </div>
-        <input type="submit" class="button edit-button" name="edit_user_submit" value="Modifier"></input>
+        <input type="submit" class="button edit_user_button" name="edit_user_submit" value="Modifier"></input>
     </form>
 </div>
