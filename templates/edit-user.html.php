@@ -58,6 +58,13 @@
                 <div class="ajout-error"><?= $errors['city'] ?></div>
             <?php endif; ?>
         </div>
+        <div>
+            <label for="role_id">Rôle de l'utilisateur</label>
+            <input type="number" name="role_id" id="role_id">
+            <?php if (isset($errors) && !empty($errors['role_id'])) : ?>
+                <div class="ajout-error"><?= $errors['role_id'] ?></div>
+            <?php endif; ?>
+        </div>
         <input type="submit" class="button ajout-button" name="edit_user_submit" value="Modifier"></input>
     </form>
 </div>

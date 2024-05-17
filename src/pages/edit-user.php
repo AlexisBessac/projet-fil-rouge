@@ -49,6 +49,11 @@ if(!empty($_GET['id']) && isset($_POST['edit_user_submit']))
         $errors['city'] = "Le champ ville est obligatoire et doit contenir plus d'un caractère";
     }
 
+    if(empty($_POST['role_id']) || !ctype_digit($_POST['role_id']))
+    {
+        $errors['role_id'] = "Le champ Rôle doit être un nombre entier";
+    }
+
     if (empty($errors)) {
         // Mise à jour de l'utilisateur
         $query = $dbh->prepare('UPDATE utilisateur SET nom = :nom, prenom = :prenom, email = :email, telephone = :telephone, numero = :numero, rue = :rue, code_postal = :code_postal, ville = :ville WHERE id_utilisateur = :id_utilisateur');
