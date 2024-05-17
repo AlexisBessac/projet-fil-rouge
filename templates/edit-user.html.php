@@ -59,12 +59,15 @@
             <?php endif; ?>
         </div>
         <div>
-            <label for="role_id">Rôle de l'utilisateur</label>
-            <input type="number" name="role_id" id="role_id">
+            <label for="role_id">Role de l'utilisateur</label>
+            <?php foreach($roles as $role) : ?>
+                <label for="role_id <?= $role['Id_role'] ?>"><?= $role['nom_role'] ?></label>
+                <input type="radio" name="role_id" id="role_id <?= $role['Id_role'] ?>" value="<?= $role['Id_role'] ?>">
+            <?php endforeach; ?>
             <?php if (isset($errors) && !empty($errors['role_id'])) : ?>
                 <div class="ajout-error"><?= $errors['role_id'] ?></div>
             <?php endif; ?>
         </div>
-        <input type="submit" class="button ajout-button" name="edit_user_submit" value="Modifier"></input>
+        <input type="submit" class="button edit-button" name="edit_user_submit" value="Modifier"></input>
     </form>
 </div>

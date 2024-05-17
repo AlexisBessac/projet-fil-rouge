@@ -97,7 +97,7 @@ th{
 .ajout-button{
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .cancel-button{
@@ -128,4 +128,12 @@ form div label {
 form div input {
     width: 100%; /* Ajuste la largeur des champs de saisie */
     margin-bottom: 10px; /* Espacement entre les champs */
+}
+
+.edit-button{
+    display: block;
+    background-color: #181C8B;
+    color: #fefefe;
+    width: 90% ;
+    margin-bottom: 10px;
 }
