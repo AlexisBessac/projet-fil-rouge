@@ -58,7 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user_submit']))
         $errors['city'] = "Le champ ville est obligatoire et doit contenir plus d'un caractère";
     }
 
-    if(empty($_POST['role_id']) || !ctype_digit($_POST['role_id']))
+    if(empty($_POST['role_id']))
     {
         $errors['role_id'] = "Veuiller cocher l'un des trois rôles";
     }
