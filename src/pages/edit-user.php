@@ -4,9 +4,7 @@ $title = "Modifier un utilisateur";
 $description = "La page pour modifier un utilisateur";
 
 require '../src/data/db-connect.php';
-
-$query = $dbh->query("SELECT * FROM role");
-$roles = $query->fetchAll();
+require '../src/pages/role.php';
 
 if(!empty($_GET['id']) && isset($_POST['edit_user_submit']))
 {
