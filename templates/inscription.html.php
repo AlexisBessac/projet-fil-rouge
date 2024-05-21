@@ -68,6 +68,6 @@
             <label for="diplomas">Votre diplôme le plus élevé</label>
             <input type="checkbox" name="diplomas" id="diplomas">
         </div>
-        <input type="submit" class="button ajout-button" name="login_submit" value="S'inscire"></input>
+        <input type="submit" class="button ajout-button" name="form_inscribe_submit" value="S'inscire"></input>
     </form>
 </div>

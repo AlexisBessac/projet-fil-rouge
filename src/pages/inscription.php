@@ -4,7 +4,7 @@ require '../src/data/db-connect.php';
 require '../src/pages/diplomas.php';
 
 // Vérification de l'envoi du formulaire et des champs
-if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']))
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']))
 {
     $errors = [];
 
@@ -88,3 +88,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']))
         exit;
     }
 }
+
+$title = "S'inscire";
+$description = "Page d'inscription à Formula'Air";
