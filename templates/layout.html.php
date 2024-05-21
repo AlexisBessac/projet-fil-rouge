@@ -20,6 +20,19 @@
         <?php require '../templates/' . $page . '.html.php'; ?>
     </main>
     
+    <footer class="footer">
+        <div class="grid">
+            <div></div>
+            <div class="legals">
+                <p>Page de confidentialité</p>
+                <p>Mentions légales</p>
+            </div>
+            <div class="copyrights">
+                <p>Tous Droits Réservés Alexis Bessac 2024</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="../assets/js/main.js"></script>
 </body>
 

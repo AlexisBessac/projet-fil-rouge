@@ -166,3 +166,28 @@ form div input {
     justify-content: space-between;
     margin-top: 10px;
 }
+
+.footer{
+    background-color: #181C8B;
+    color: #fefefe;
+    margin-top: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Trois colonnes égales */
+    gap: 20px; /* Espace entre les colonnes */
+    align-items: center; /* Alignement vertical au centre */
+}
+
+.legals{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyrights{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
