@@ -1,7 +1,6 @@
 <?php
 
 require '../src/data/db-connect.php';
-require '../src/pages/diplomas.php';
 
 // Vérification de l'envoi du formulaire et des champs
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']))
