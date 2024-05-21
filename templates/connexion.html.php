@@ -1,9 +1,9 @@
 <div class="container">
     <h1>Se Connecter</h1>
-    <form action="" method="POST">
+    <form action="" method="POST" class="form-login">
         <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Ex. john.doe@domaine.com">
+            <input type="email" name="email" id="email" placeholder="john.doe@domaine.com">
             <?php if(isset($errors) && !empty($errors['email'])) : ?>
                     <div class="ajout-error">
                         <?= $errors['email'] ?>
@@ -19,9 +19,9 @@
                     </div>
                 <?php endif; ?>
         </div>
+        <input name="form_login_submit" type="button" class="button login_button" value="Se Connecter">
         <div>
-            <button class="button">Mot de passe oublié</button>
+            <button class="button login_button">Mot de passe oublié</button>
         </div>
-        <input name="form_login_submit" type="button" class="button" value="Se Connecter">
-  </form>
+    </form>
 </div>
