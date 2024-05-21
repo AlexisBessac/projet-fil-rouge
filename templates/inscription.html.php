@@ -64,14 +64,6 @@
                 <div class="ajout-error"><?= $errors['city'] ?></div>
             <?php endif; ?>
         </div>
-        <div>
-            <label for="diplomas">Votre diplôme le plus élevé</label>
-            <select name="diplomas" id="diplomas">
-                <?php foreach ($diplomas as $diploma) : ?>
-                    <option value="<?= $diploma['Id_diplomes'] ?>"><?= $diploma['nom_diplomes'] ?></option>
-                <?php endforeach; ?>
-            </select>
-        </div>
         <input type="submit" class="button ajout-button" name="form_inscribe_submit" value="S'inscire"></input>
     </form>
 </div>
