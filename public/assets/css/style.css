@@ -128,11 +128,6 @@ th{
     margin-bottom: 10px;
 }
 
-.ajout-error{
-    display: block;
-    color: #ff0000;
-}
-
 .text-user{
     background-color: #fefefe;
     color: #181C8B;
@@ -179,6 +174,11 @@ form div input {
     align-items: center;
     white-space: nowrap; /*Mets le texte sur une seule ligne*/
     margin: 10px 10px;
+}
+
+.ajout-error{
+    display: block;
+    color: #ff0000;
 }
 
 

@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_login_submit']))
                 session_start();
                 $_SESSION['id'] = $user['id']; // Utilisez $user['id'] au lieu de $customer['id_customer']
 
-                header('Location: /?page=dashboard');
+                header('Location: /index.php?page=dashboard');
                 exit;
             }
             else
