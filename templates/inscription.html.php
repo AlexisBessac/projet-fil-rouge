@@ -64,6 +64,16 @@
                 <div class="ajout-error"><?= $errors['city'] ?></div>
             <?php endif; ?>
         </div>
+        <div>
+            <label for="role_id">Role de l'utilisateur</label>
+            <?php foreach($roles as $role) : ?>
+                <label for="role_id <?= $role['Id_role'] ?>"><?= $role['nom_role'] ?></label>
+                <input type="radio" name="role_id" id="role_id <?= $role['Id_role'] ?>" value="<?= $role['Id_role'] ?>">
+            <?php endforeach; ?>
+            <?php if (isset($errors) && !empty($errors['role_id'])) : ?>
+                <div class="ajout-error"><?= $errors['role_id'] ?></div>
+            <?php endif; ?>
+        </div>
         <input type="submit" class="button ajout-button" name="form_inscribe_submit" value="S'inscire"></input>
     </form>
 </div>

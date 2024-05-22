@@ -1,6 +1,7 @@
 <?php
 
 require '../src/data/db-connect.php';
+require '../src/pages/role.php';
 
 // Vérification de l'envoi du formulaire et des champs
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']))
@@ -52,6 +53,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit'])
         $errors['city'] = "Le champ ville est obligatoire et doit contenir plus d'un caractère";
     }
 
+    if(empty($_POST['role_id']))
+    {
+        $errors['role_id'] = "Veuiller cocher l'un des trois rôles";
+    }
+
 
     if(empty($errors))
     {
@@ -76,6 +82,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit'])
             'rue' => $_POST['street'],
             'code_postal' => $_POST['zip_code'],
             'ville' => $_POST['city'],
+            'id_role' => $_POST['role_id']
         ]);
 
         if(!$dbh->lastInsertId())
