@@ -19,9 +19,9 @@
                 </div>
             <?php endif; ?>
         </div>
-        <input name="form_login_submit" type="button" class="button login_button" value="Se Connecter">
+        <div class="container_button">
+            <input name="form_login_submit" type="button" class="button login_button" value="Se Connecter">
+            <button type="button" class="button login_button">Mot de passe oublié</button>
+        </div>
     </form>
-    <div>
-        <button class="button login_button">Mot de passe oublié</button>
-    </div>
 </div>

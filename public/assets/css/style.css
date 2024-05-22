@@ -120,6 +120,14 @@ th{
     margin-bottom: 10px;
 }
 
+.edit_user_button{
+    display: block;
+    background-color: #181C8B;
+    color: #fefefe;
+    width: 90% ;
+    margin-bottom: 10px;
+}
+
 .ajout-error{
     display: block;
     color: #ff0000;
@@ -152,25 +160,25 @@ form div input {
     margin-bottom: 10px; /* Espacement entre les champs */
 }
 
-.edit_user_button{
-    display: block;
-    background-color: #181C8B;
-    color: #fefefe;
-    width: 90% ;
-    margin-bottom: 10px;
-}
-
 .form-login{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.container_button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .login_button{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap; /*Mets le texte sur une seule ligne*/
+    margin: 10px 10px;
 }
 
 
