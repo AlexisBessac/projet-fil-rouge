@@ -1,3 +1,4 @@
+/*Style Généraux du site*/
 *{
     box-sizing: border-box;
 }
@@ -27,28 +28,42 @@ body{
     font-style: normal;
 }
 
+.button{
+    color: #fefefe;
+    background-color: #181C8B;
+}
+
+
+/* Style de la page d'accueil */
+.button-container{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    gap:10px ;
+}
+
+.login{
+    color: #fefefe;
+    background-color: #181C8B;
+    border: none;
+    padding: 10px 20px;
+}
+
 .punchline{
     text-align: center;
     margin-top: 50px;
 }
 
 
+/* Style de la page 404 */
 .error{
     text-align: center;
     color: #181C8B;
 }
 
-.ajout-error{
-    display: block;
-    color: #ff0000;
-}
 
-
-.button{
-    color: #fefefe;
-    background-color: #181C8B;
-}
-
+/*Style du CRUD*/
 .search{
     display: flex;
     flex-direction: row;
@@ -70,7 +85,6 @@ tr:nth-child(odd) td {
     background-color: #fefefe;
     color: #181C8B;
 }
-
 
 td{
     padding: 8px;
@@ -106,12 +120,19 @@ th{
     margin-bottom: 10px;
 }
 
+.ajout-error{
+    display: block;
+    color: #ff0000;
+}
+
 .text-user{
     background-color: #fefefe;
     color: #181C8B;
     text-align: center;
 }
 
+
+/* Style des formulaires */
 form {
     display: flex;
     flex-wrap: wrap;
@@ -139,21 +160,6 @@ form div input {
     margin-bottom: 10px;
 }
 
-.button-container{
-    display: flex;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    gap:10px ;
-}
-
-.login{
-    color: #fefefe;
-    background-color: #181C8B;
-    border: none;
-    padding: 10px 20px;
-}
-
 .form-login{
     display: flex;
     flex-direction: column;
@@ -167,6 +173,8 @@ form div input {
     margin-top: 10px;
 }
 
+
+/* Style du footer */
 .footer{
     background-color: #181C8B;
     color: #fefefe;
