@@ -40,9 +40,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_login_submit']))
                 // Authentification réussie
                 // Ouverture de la session
                 session_start();
-                $_SESSION['id'] = $user['id']; // Utilisez $user['id'] au lieu de $customer['id_customer']
+                $_SESSION['id_utilisateur'] = $user['id_utilisateur']; // Utilisez $user['id'] au lieu de $customer['id_customer']
 
-                header('Location: /index.php?page=dashboard');
+                header('Location: /?page=dashboard');
                 exit;
             }
             else

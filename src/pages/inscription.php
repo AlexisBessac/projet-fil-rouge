@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
             ]);
 
             if ($dbh->lastInsertId()) {
-                header('Location: /index.php?page=connexion');
+                header('Location: /?page=connexion');
                 exit;
             } 
             else 
