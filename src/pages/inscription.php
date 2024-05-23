@@ -47,7 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
         $errors['zip_code'] = "Le Code Postal renseigné n'est pas valide";
     }
 
-    if (empty($_POST['city']) || strlen($_POST['city']) <= 1) {
+    if (empty($_POST['city']) || strlen($_POST['city']) <= 1) 
+    {
         $errors['city'] = "Le champ ville est obligatoire et doit contenir plus d'un caractère";
     }
 

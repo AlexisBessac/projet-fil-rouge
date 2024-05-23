@@ -135,7 +135,7 @@ th{
 }
 
 
-/* Style des formulaires */
+/* Style Généraux des formulaires */
 form {
     display: flex;
     flex-wrap: wrap;
@@ -155,6 +155,16 @@ form div input {
     margin-bottom: 10px; /* Espacement entre les champs */
 }
 
+.ajout-error{
+    display: block;
+    color: #ff0000;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Style du formulaire de la page Se Connecter */
 .form-login{
     display: flex;
     flex-direction: column;
@@ -174,11 +184,6 @@ form div input {
     align-items: center;
     white-space: nowrap; /*Mets le texte sur une seule ligne*/
     margin: 10px 10px;
-}
-
-.ajout-error{
-    display: block;
-    color: #ff0000;
 }
 
 
