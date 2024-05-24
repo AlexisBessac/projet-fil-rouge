@@ -17,9 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
         $errors['lastname'] = "Le champ Nom est obligatoire et doit contenir plus d'un caractère";
     }
 
-    if (empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) 
+    if (empty($_POST['email_register']) || !filter_var($_POST['email_register'], FILTER_VALIDATE_EMAIL)) 
     {
-        $errors['email'] = "Le champ Email est obligatoire et doit contenir une adresse email valide";
+        $errors['email_register'] = "Le champ Email est obligatoire et doit contenir une adresse email valide";
     }
 
     if (empty($_POST['password'])) 

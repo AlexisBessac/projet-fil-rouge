@@ -16,20 +16,6 @@
             <?php endif; ?>
         </div>
         <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="">
-            <?php if (isset($errors) && !empty($errors['email'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['email']) ?></div>
-            <?php endif; ?>
-        </div>
-        <div>
-            <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password">
-            <?php if (isset($errors) && !empty($errors['password'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['password']) ?></div>
-            <?php endif; ?>
-        </div>
-        <div>
             <label for="phone_number">Téléphone</label>
             <input type="tel" name="phone_number" id="phone_number">
             <?php if (isset($errors) && !empty($errors['phone_number'])) : ?>
@@ -62,6 +48,20 @@
             <input type="text" name="city" id="city" placeholder="Entrer une ville">
             <?php if (isset($errors) && !empty($errors['city'])) : ?>
                 <div class="ajout-error"><?= htmlspecialchars($errors['city']) ?></div>
+            <?php endif; ?>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email_register" id="email_register" placeholder="">
+            <?php if (isset($errors) && !empty($errors['email_register'])) : ?>
+                <div class="ajout-error"><?= htmlspecialchars($errors['email_register']) ?></div>
+            <?php endif; ?>
+        </div>
+        <div>
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password">
+            <?php if (isset($errors) && !empty($errors['password'])) : ?>
+                <div class="ajout-error"><?= htmlspecialchars($errors['password']) ?></div>
             <?php endif; ?>
         </div>
         <div>
