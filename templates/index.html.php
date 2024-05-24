@@ -2,12 +2,12 @@
     <div class="button-container">
         <div>
             <a href="/?page=inscription">
-                <button class="login">S'inscrire</button>
+                <button title="S'inscrire" class="login">S'inscrire</button>
             </a>
         </div>
         <div>
             <a href="/?page=connexion">
-                <button class="login">Se Connecter</button>
+                <button title="Se connecter" class="login">Se Connecter</button>
             </a>
         </div>
     </div>

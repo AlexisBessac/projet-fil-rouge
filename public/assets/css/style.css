@@ -148,6 +148,7 @@ form div {
 
 form div label {
     display: block; /* Affiche les labels sur une ligne */
+    font-weight: bold;
 }
 
 form div input {
@@ -162,6 +163,39 @@ form div input {
 
 .hidden{
     display: none;
+}
+
+
+/* Style du formulaire de la page s'Inscrire */
+.adresse-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coordonne{
+    display: inline;
+    margin-right: 20px;
+}
+
+.role-utilisateur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 20px;  
+    margin-right: 20px; 
+    margin-left: 50px; 
+}
+
+.register-button{
+    display: block;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #fefefe;
+    background-color: #181C8B;
+    width: 100%;
 }
 
 /* Style du formulaire de la page Se Connecter */

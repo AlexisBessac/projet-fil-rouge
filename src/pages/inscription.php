@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
     if (empty($errors)) 
     {
         require '../src/data/db-connect.php';
-        $email = $_POST['email'];
+        $email = $_POST['email_register'];
         $query = $dbh->prepare("SELECT id_utilisateur FROM utilisateur WHERE email = :email");
         $query->execute(['email' => $email]);
         $utilisateurId = $query->fetch();
@@ -83,16 +83,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
 
             $query = $dbh->prepare("INSERT INTO utilisateur(nom, prenom, email, password, telephone, numero, rue, code_postal, ville, Id_role) VALUES(:nom, :prenom, :email, :password, :telephone, :numero, :rue, :code_postal, :ville, :Id_role)");
             $query->execute([
-                'nom' => $_POST['lastname'],
-                'prenom' => $_POST['firstname'],
-                'email' => $_POST['email'],
+                'nom' => htmlspecialchars($_POST['lastname']),
+                'prenom' => htmlspecialchars($_POST['firstname']),
+                'email' => htmlspecialchars($email),
                 'password' => $newMdp,
-                'telephone' => $_POST['phone_number'],
-                'numero' => $_POST['street_number'],
-                'rue' => $_POST['street'],
-                'code_postal' => $_POST['zip_code'],
-                'ville' => $_POST['city'],
-                'Id_role' => $_POST['role_id']
+                'telephone' => htmlspecialchars($_POST['phone_number']),
+                'numero' => htmlspecialchars($_POST['street_number']),
+                'rue' => htmlspecialchars($_POST['street']),
+                'code_postal' => htmlspecialchars($_POST['zip_code']),
+                'ville' => htmlspecialchars($_POST['city']),
+                'Id_role' => htmlspecialchars($_POST['role_id'])
             ]);
 
             if ($dbh->lastInsertId()) {
