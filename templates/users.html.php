@@ -35,7 +35,7 @@
                     <td><?= $users['code_postal'] ?></td>
                     <td><?= $users['ville'] ?></td>
                     <td>
-                        <a href="/?page=edit-user&id=<?= $users['id_utilisateur'] ?>" class="edit-button">Modifier</a>
+                        <a href="/?page=edit-user&id=<?= $users['id_utilisateur'] ?>" class="button">Modifier</a>
                     </td>
                     <td>
                         <form action="/?page=delete-user" method="POST" onsubmit="return confirm('Are you sure ?')">
