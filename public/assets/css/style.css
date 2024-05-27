@@ -149,6 +149,8 @@ th{
     margin-bottom: 10px;
 }
 
+
+    /* Texte s'il n'y à aucune information trouvé dans le tableau utilisateur ou formation */
 .text-user{
     background-color: #fefefe;
     color: #181C8B;
