@@ -4,10 +4,13 @@
         <a href="/?page=add-user"><button class="button">Créer un utilisateur</button></a>
     </div>
     <div>
-        <form action="" method="GET" class="search">
+        <form action="index.php?page=users" method="GET" class="search">
             <input type="text" name="search" id="search" placeholder="Rechercher un utilisateur">
-            <button class="button" type="submit" name="search_submit">Rechercher</button>
+            <button class="button" type="submit">Rechercher</button>
         </form>
+        <?php if (isset($resultCount)) : ?>
+            <h2><?= htmlspecialchars($resultCount); ?> résultats correspondants à votre recherche "<?= htmlspecialchars($search); ?>".</h2>
+        <?php endif; ?>
     </div>
     <table class="table">
         <thead>

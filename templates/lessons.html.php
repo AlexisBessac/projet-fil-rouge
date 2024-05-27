@@ -5,7 +5,7 @@
     </div>
     <div>
         <form action="" method="GET" class="search">
-            <input type="text" name="search" id="search" placeholder="Rechercher un utilisateur">
+            <input type="text" name="search" id="search" placeholder="Rechercher une formation">
             <button class="button" type="submit" name="search_submit">Rechercher</button>
         </form>
     </div>
