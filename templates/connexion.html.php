@@ -20,8 +20,8 @@
             <?php endif; ?>
         </div>
         <div class="container_button">
-            <input name="form_login" type="button" class="button login_button" value="Se Connecter">
-            <button type="button" class="button login_button">Mot de passe oublié</button>
+            <input name="form_login" type="button" class="button login_button" title="Se Connecter" value="Se Connecter">
+            <button type="button" class="button login_button" title="Mot de passe oublié">Mot de passe oublié</button>
         </div>
     </form>
 </div>
