@@ -5,7 +5,6 @@ require '../src/data/db-connect.php';
 $query = $dbh->query("SELECT * FROM utilisateur");
 $user = $query->FETCHALL();
 
-
 // Traitement du formulaire de recherche si une recherche est faite
 if(isset($_GET['search']) && !empty($_GET['search'])) {
     $search = strtolower($_GET['search']);
@@ -23,8 +22,6 @@ else
     $query = $dbh->query("SELECT * FROM utilisateur ORDER BY nom");
     $useres = $query->fetchAll();
 }
-
-
 
 $title = "Liste des utilisateurs";
 $description = "Sur cette page sont listés les utilisateurs de notre site Web";

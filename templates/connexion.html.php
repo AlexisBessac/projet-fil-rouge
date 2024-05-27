@@ -6,7 +6,7 @@
             <input type="email" name="email" id="email" placeholder="john.doe@domaine.com">
             <?php if (isset($errors) && !empty($errors['email'])) : ?>
                 <div class="ajout-error">
-                    <?= $errors['email'] ?>
+                    <?= htmlspecialchars($errors['email']) ?>
                 </div>
             <?php endif; ?>
         </div>
@@ -15,12 +15,12 @@
             <input type="password" name="password" id="password">
             <?php if (isset($errors) && !empty($errors['password'])) : ?>
                 <div class="ajout-error">
-                    <?= $errors['password'] ?>
+                    <?= htmlspecialchars($errors['password']) ?>
                 </div>
             <?php endif; ?>
         </div>
         <div class="container_button">
-            <input name="form_login_submit" type="button" class="button login_button" value="Se Connecter">
+            <input name="form_login" type="button" class="button login_button" value="Se Connecter">
             <button type="button" class="button login_button">Mot de passe oublié</button>
         </div>
     </form>
