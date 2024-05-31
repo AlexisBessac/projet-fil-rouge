@@ -264,3 +264,84 @@ form div input {
     margin: 10px 10px;
     cursor: pointer;
 }
+
+
+    /* Style du dashboard de l'utilisateur */
+.navbar {
+    text-align: center; /* Centre le contenu de la barre de navigation */
+}
+    
+.navbar ul {
+    list-style-type: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    margin: 0; /* Enlève la marge par défaut */
+    display: inline-block; /* Permet de centrer la liste */
+}
+    
+.navbar ul li {
+    display: inline; /* Affiche les éléments de la liste en ligne */
+    margin-right: 10px; /* Ajoute un espacement entre les éléments */
+}
+    
+.navbar ul li:last-child {
+    margin-right: 0; /* Enlève l'espacement à droite du dernier élément */
+}
+    
+.navbar ul li a .button {
+    text-decoration: none; /* Enlève le soulignement des liens */
+}
+
+
+    /* Style des cards de formation pour lesquelles 
+            l'utilisateur peut postuler  */
+
+.card-container {
+    display: flex; /* Utilise flexbox pour afficher les éléments en ligne */
+    flex-wrap: wrap; /* Permet de passer à la ligne suivante si nécessaire */
+    gap: 20px; /* Ajoute un espace entre les cartes */
+    justify-content: center; /* Centre les cartes horizontalement */
+    padding: 20px; /* Ajoute un padding autour du conteneur */
+}
+
+.card {
+    width: 25%;
+    background-color: #181C8B;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card-body {
+    padding: 16px;
+    color: #fefefe;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fefefe;
+    display: flex;
+    text-align: center;
+  }
+
+  .card-text {
+    font-size: 14px;
+    color: #fefefe;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #181C8B;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
