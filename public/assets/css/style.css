@@ -166,11 +166,21 @@ th{
     text-align: center;
 }
 
+/* Style du CRUD des formations */
+.formation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+}
+
 
     /* Style Généraux des formulaires */
 form {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 form div {
@@ -185,7 +195,7 @@ form div label {
 
 form div input {
     width: 100%; /* Ajuste la largeur des champs de saisie */
-    margin-bottom: 10px; /* Espacement entre les champs */
+    margin-bottom: 20px; /* Espacement entre les champs */
 }
 
 .ajout-error{

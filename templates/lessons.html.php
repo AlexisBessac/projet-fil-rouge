@@ -31,7 +31,7 @@
                     <td><?= $lessons['lieu'] ?></td>
                     <td><?= $lessons['ville'] ?></td>
                     <td>
-                        <a class="edit-button">Modifier</a>
+                        <a href="/?page=edit-lesson&id=<?= $lessons['id_formation'] ?>" class="button">Modifier</a>
                     </td>
                     <td>
                         <form action="" method="POST" onsubmit="return confirm('Are you sure ?')">

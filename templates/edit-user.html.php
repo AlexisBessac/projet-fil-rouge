@@ -4,67 +4,67 @@
     <form action="" method="POST">
         <div>
             <label for="firstname">Prénom</label>
-            <input type="text" name="firstname" id="firstname" placeholder="Votre Prénom">
-            <?php if (isset($errors) && !empty($errors['firstname'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['firstname']) ?></div>
+            <input type="text" name="['utilisateur']['prenom']" id="['utilisateur']['prenom']" placeholder="Votre Prénom">
+            <?php if (isset($errors) && !empty($errors['utilisateur']['prenom'])) : ?>
+                <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['prenom']) ?></div>
             <?php endif; ?>
         </div>
         <div>
             <label for="lastname">Nom</label>
-            <input type="text" name="lastname" id="lastname" placeholder="Votre nom">
-            <?php if (isset($errors) && !empty($errors['lastname'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['lastname']) ?></div>
+            <input type="text" name="['utilisateur']['nom']" id="['utilisateur']['nom']" placeholder="Votre nom">
+            <?php if (isset($errors) && !empty($errors['utilisateur']['nom'])) : ?>
+                <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['nom']) ?></div>
             <?php endif; ?>
         </div>
         <div class="coordonne">
             <label for="phone_number">Téléphone</label>
-            <input type="tel" name="phone_number" id="phone_number">
-            <?php if (isset($errors) && !empty($errors['phone_number'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['phone_number']) ?></div>
+            <input type="tel" name="['utilisateur']['telephone']" id="['utilisateur']['telephone']r">
+            <?php if (isset($errors) && !empty($errors['utilisateur']['telephone'])) : ?>
+                <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['telephone']) ?></div>
             <?php endif; ?>
         </div>
         <div class="adresse-form">
             <div>
                 <label for="street_number">Numéro de la rue</label>
-                <input type="text" name="street_number" id="street_number">
-                <?php if (isset($errors) && !empty($errors['street_number'])) : ?>
-                    <div class="ajout-error"><?= htmlspecialchars($errors['street_number']) ?></div>
+                <input type="text" name="['utilisateur']['numero']" id="['utilisateur']['numero']">
+                <?php if (isset($errors) && !empty($errors['utilisateur']['numero'])) : ?>
+                    <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['numero']) ?></div>
                 <?php endif; ?>
             </div>
             <div>
                 <label for="street">Voie</label>
-                <input type="text" name="street" id="street" placeholder="Entrer le nom d'une rue">
-                <?php if (isset($errors) && !empty($errors['street'])) : ?>
-                    <div class="ajout-error"><?= htmlspecialchars($errors['street']) ?></div>
+                <input type="text" name="['utilisateur']['rue']" id="['utilisateur']['rue']" placeholder="Entrer le nom d'une rue">
+                <?php if (isset($errors) && !empty($errors['utilisateur']['rue'])) : ?>
+                    <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['rue']) ?></div>
                 <?php endif; ?>
             </div>
             <div>
                 <label for="zip_code">Code Postal</label>
-                <input type="number" name="zip_code" id="zip_code">
-                <?php if (isset($errors) && !empty($errors['zip_code'])) : ?>
-                    <div class="ajout-error"><?= htmlspecialchars($errors['zip_code']) ?></div>
+                <input type="number" name="['utilisateur']['code_postal']" id="['utilisateur']['code_postal']">
+                <?php if (isset($errors) && !empty($errors['utilisateur']['code_postal'])) : ?>
+                    <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['code_postal']) ?></div>
                 <?php endif; ?>
             </div>
         </div>
         <div class="coordonne">
             <label for="city">Ville</label>
-            <input type="text" name="city" id="city" placeholder="Entrer une ville">
-            <?php if (isset($errors) && !empty($errors['city'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['city']) ?></div>
+            <input type="text" name="['utilisateur']['ville']" id="['utilisateur']['ville']" placeholder="Entrer une ville">
+            <?php if (isset($errors) && !empty($errors['utilisateur']['ville'])) : ?>
+                <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['ville']) ?></div>
             <?php endif; ?>
         </div>
         <div class="coordonne">
             <label for="email">Email</label>
-            <input type="email" name="email_register" id="email_register" placeholder="">
-            <?php if (isset($errors) && !empty($errors['email_register'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['email_register']) ?></div>
+            <input type="email" name="['utilisateur']['email']" id="['utilisateur']['email']" placeholder="">
+            <?php if (isset($errors) && !empty($errors['utilisateur']['email'])) : ?>
+                <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['email']) ?></div>
             <?php endif; ?>
         </div>
         <div>
             <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password">
-            <?php if (isset($errors) && !empty($errors['password'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['password']) ?></div>
+            <input type="password" name="['utilisateur']['password']" id="['utilisateur']['password']">
+            <?php if (isset($errors) && !empty($errors['utilisateur']['password'])) : ?>
+                <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['password']) ?></div>
             <?php endif; ?>
         </div>
         <div class="role-utilisateur">
@@ -73,7 +73,7 @@
                 <?php $is_admin = trim(strtolower($role['nom_role'])) === 'administrateur'; ?>
                 <div class="<?= $is_admin ? 'hidden' : '' ?>">
                     <label for="role_id_<?= htmlspecialchars($role['Id_role']) ?>"><?= htmlspecialchars($role['nom_role']) ?></label>
-                    <input type="radio" name="role_id" id="role_id_<?= htmlspecialchars($role['Id_role']) ?>" value="<?= htmlspecialchars($role['Id_role']) ?>">
+                    <input type="radio" name="['utilisateur']['role_Id']" id="['utilisateur']['role_Id'])" value="<?= htmlspecialchars($role['Id_role']) ?>">
                 </div>
             <?php endforeach; ?>
             <?php if (isset($errors) && !empty($errors['role_id'])) : ?>

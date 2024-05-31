@@ -3,7 +3,6 @@
 $title = "Ajout d'un utilisateur";
 $description = "Formulaire d'ajout d'un utilisateur";
 
-require '../src/data/db-connect.php';
 require '../src/pages/role.php';
 
 // Vérification de l'envoi du formulaire et des champs
