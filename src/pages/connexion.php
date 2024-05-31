@@ -38,8 +38,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_login']))
                 // Authentification réussie
                 // Ouverture de la session
                 session_start();
-                $_SESSION['id'] = $user['id']; 
-
+                $_SESSION['id'] = $user['id'];
+               
                 header('Location: /?page=dashboard');
                 exit;
             }

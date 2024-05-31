@@ -1,4 +1,4 @@
 <?php
 
-$title = "Mon tableau de bord";
-$description = "Tableau de bord de l'utilisateur pour connaître l'avancement de son dossier ou de la formation pour validé ou non des documents";
+$title = "Tableau de bord de l'utilisateur";
+$description = "Sur cette page on affiche le tableau de bord de l'utilisateur";
