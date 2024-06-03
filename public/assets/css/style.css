@@ -213,6 +213,12 @@ form div input {
 
 
     /* Style du formulaire de la page s'Inscrire */
+.identite{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .adresse-form {
     display: flex;
     flex-direction: row;
@@ -223,6 +229,7 @@ form div input {
 .coordonne{
     display: inline;
     margin-right: 20px;
+    margin-left: 30px;
 }
 
 .role-utilisateur{

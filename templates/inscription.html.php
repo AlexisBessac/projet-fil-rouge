@@ -1,19 +1,21 @@
 <div class="container">
     <h1>S'inscrire</h1>
     <form action="" method="POST">
-        <div>
-            <label for="firstname">Prénom</label>
-            <input type="text" name="firstname" id="firstname" placeholder="Votre Prénom">
-            <?php if (isset($errors) && !empty($errors['firstname'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['firstname']) ?></div>
-            <?php endif; ?>
-        </div>
-        <div>
-            <label for="lastname">Nom</label>
-            <input type="text" name="lastname" id="lastname" placeholder="Votre nom">
-            <?php if (isset($errors) && !empty($errors['lastname'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['lastname']) ?></div>
-            <?php endif; ?>
+        <div class="identite">
+            <div>
+                <label for="firstname">Prénom</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Votre Prénom">
+                <?php if (isset($errors) && !empty($errors['firstname'])) : ?>
+                    <div class="ajout-error"><?= htmlspecialchars($errors['firstname']) ?></div>
+                <?php endif; ?>
+            </div>
+            <div>
+                <label for="lastname">Nom</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Votre nom">
+                <?php if (isset($errors) && !empty($errors['lastname'])) : ?>
+                    <div class="ajout-error"><?= htmlspecialchars($errors['lastname']) ?></div>
+                <?php endif; ?>
+            </div>
         </div>
         <div class="coordonne">
             <label for="phone_number">Téléphone</label>

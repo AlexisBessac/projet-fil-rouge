@@ -4,7 +4,7 @@
         <a href="/?page=add-user"><button class="button">Créer un utilisateur</button></a>
     </div>
     <div>
-        <form action="/?page=users" method="GET" class="search">
+        <form action="page=users" method="GET" class="search">
             <input type="text" name="search" id="search" placeholder="Rechercher un utilisateur">
             <button class="button" type="submit">Rechercher</button>
         </form>
