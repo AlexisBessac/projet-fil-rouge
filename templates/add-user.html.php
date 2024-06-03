@@ -2,22 +2,22 @@
     <h1>Ajouter un utilisateur</h1>
     <a href="/?page=users"><button class="button cancel-button">Annuler</button></a>
     <form action="" method="POST">
-            <div class="identite">
-                <div>
-                    <label for="firstname">Prénom</label>
-                    <input type="text" name="firstname" id="firstname" placeholder="Votre Prénom">
-                    <?php if (isset($errors) && !empty($errors['firstname'])) : ?>
-                        <div class="ajout-error"><?= htmlspecialchars($errors['firstname']) ?></div>
-                    <?php endif; ?>
-                </div>
-                <div>
-                    <label for="lastname">Nom</label>
-                    <input type="text" name="lastname" id="lastname" placeholder="Votre nom">
-                    <?php if (isset($errors) && !empty($errors['lastname'])) : ?>
-                        <div class="ajout-error"><?= htmlspecialchars($errors['lastname']) ?></div>
-                    <?php endif; ?>
-                </div>
+        <div class="identite">
+            <div>
+                <label for="firstname">Prénom</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Votre Prénom">
+                <?php if (isset($errors) && !empty($errors['firstname'])) : ?>
+                    <div class="ajout-error"><?= htmlspecialchars($errors['firstname']) ?></div>
+                <?php endif; ?>
             </div>
+            <div>
+                <label for="lastname">Nom</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Votre nom">
+                <?php if (isset($errors) && !empty($errors['lastname'])) : ?>
+                    <div class="ajout-error"><?= htmlspecialchars($errors['lastname']) ?></div>
+                <?php endif; ?>
+            </div>
+        </div>
         <div class="coordonne">
             <label for="phone_number">Téléphone</label>
             <input type="tel" name="phone_number" id="phone_number">
