@@ -16,13 +16,20 @@
 </head>
 
 <body>
+    <header class="header"> 
+        <div class="logo">
+            <img src="" alt="Logo de Formul'Air">
+        </div>
+    </header>
     <main>
         <?php require '../templates/' . $page . '.html.php'; ?>
     </main>
     
     <footer class="footer">
         <div class="grid">
-            <div></div>
+            <div>
+                <img src="" alt="">
+            </div>
             <div class="legals">
                 <p>Page de confidentialité</p>
                 <p>Mentions légales</p>

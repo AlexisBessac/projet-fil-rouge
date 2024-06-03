@@ -34,6 +34,10 @@ body{
     cursor: pointer;
 }
 
+.header{
+    background-color: #181C8B;
+}
+
 
     /* Style du footer */
 .footer{
@@ -242,6 +246,7 @@ form div input {
     cursor: pointer;
 }
 
+
     /* Style du formulaire de la page Se Connecter */
 .form-login{
     display: flex;
@@ -272,9 +277,9 @@ form div input {
 }
     
 .navbar ul {
-    list-style-type: none; /* Enlève les puces */
-    padding: 0; /* Enlève le padding par défaut */
-    margin: 0; /* Enlève la marge par défaut */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: inline-block; /* Permet de centrer la liste */
 }
     
