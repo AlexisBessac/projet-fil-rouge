@@ -15,7 +15,6 @@
     <table class="table">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nom</th>
                 <th>Prénom</th>
                 <th>Email</th>
@@ -29,7 +28,6 @@
         <tbody>
             <?php foreach ($user as $users) : ?>
                 <tr>
-                    <td><?= $users['id_utilisateur'] ?></td>
                     <td><?= $users['nom'] ?></td>
                     <td><?= $users['prenom'] ?></td>
                     <td><?= $users['email'] ?></td>

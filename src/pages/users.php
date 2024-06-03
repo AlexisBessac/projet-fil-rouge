@@ -10,7 +10,7 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
     $search = strtolower($_GET['search']);
     $query = $dbh->prepare("SELECT * FROM utilisateur WHERE nom LIKE :search ORDER BY nom");
     $query->execute([':search' => "%$search%"]);
-    $useres = $query->fetchAll();
+    $user = $query->fetchAll();
 
     // Nombre de résultats total
     $query = $dbh->prepare("SELECT COUNT(*) AS resultCount FROM utilisateur WHERE nom LIKE :search");
@@ -20,7 +20,7 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
 else 
 {
     $query = $dbh->query("SELECT * FROM utilisateur ORDER BY nom");
-    $useres = $query->fetchAll();
+    $user = $query->fetchAll();
 }
 
 $title = "Liste des utilisateurs";
