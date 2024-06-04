@@ -2,19 +2,21 @@
     <h1>Modifier un utilisateur</h1>
     <a href="/?page=users"><button class="button cancel-button">Annuler</button></a>
     <form action="" method="POST">
-        <div>
-            <label for="firstname">Prénom</label>
-            <input type="text" name="['utilisateur']['prenom']" id="['utilisateur']['prenom']" placeholder="Votre Prénom">
-            <?php if (isset($errors) && !empty($errors['utilisateur']['prenom'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['prenom']) ?></div>
-            <?php endif; ?>
-        </div>
-        <div>
-            <label for="lastname">Nom</label>
-            <input type="text" name="['utilisateur']['nom']" id="['utilisateur']['nom']" placeholder="Votre nom">
-            <?php if (isset($errors) && !empty($errors['utilisateur']['nom'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['nom']) ?></div>
-            <?php endif; ?>
+        <div class=identite>
+            <div>
+                <label for="firstname">Prénom</label>
+                <input type="text" name="['utilisateur']['prenom']" id="['utilisateur']['prenom']" placeholder="Votre Prénom">
+                <?php if (isset($errors) && !empty($errors['utilisateur']['prenom'])) : ?>
+                    <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['prenom']) ?></div>
+                <?php endif; ?>
+            </div>
+            <div>
+                <label for="lastname">Nom</label>
+                <input type="text" name="['utilisateur']['nom']" id="['utilisateur']['nom']" placeholder="Votre nom">
+                <?php if (isset($errors) && !empty($errors['utilisateur']['nom'])) : ?>
+                    <div class="ajout-error"><?= htmlspecialchars($errors['utilisateur']['nom']) ?></div>
+                <?php endif; ?>
+            </div>
         </div>
         <div class="coordonne">
             <label for="phone_number">Téléphone</label>
