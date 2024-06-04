@@ -170,7 +170,7 @@ th{
     text-align: center;
 }
 
-/* Style du CRUD des formations */
+    /* Style du CRUD des formations */
 .formation{
     display: flex;
     flex-direction: row;

@@ -13,53 +13,85 @@ if(!empty($_GET['id']))
     if(isset($_POST['edit_user_submit']))
     {
         // On rajoute l'id dans les données du POST
-        $_POST['utilisateur']['id_utilisateur'] = $_GET['id'];
+        $_POST['id_utilisateur'] = $_GET['id'];
 
-        # Vérification des champs
-        if(empty($_POST['utilisateur']['prenom']) || strlen($_POST['utilisateur']['prenom']))
-            $errors['utilisateur']['prenom'] = "Le champ Prénom est obligatoire.";
+        $errors = [];
 
-        if(empty($_POST['utilisateur']['nom']) || strlen($_POST['utilisateur']['nom']))
-            $errors['utilisateur']['nom'] = "Le champ Nom est obligatoire";
-
-        if(empty($_POST['utilisateur']['email']) || !filter_var($_POST['utilisateur']['email'], FILTER_VALIDATE_EMAIL))
-            $errors['utilisateur']['email'] = "Le champ Email est obligatoire";
-
-        if (empty($_POST['utilisateur']['telephone'])) 
+        if(empty($_POST['firstname']) || strlen($_POST['firstname']) <=1)
         {
-            $errors['utilisateur']['telephone'] = "Le numéro de téléphone n'est pas valide";
+            $errors['firstname'] = "Le champ Prénom est obligatoire et doit contenir plus d'un caractère";
         }
 
-        if (empty($_POST['utilisateur']['numero'])) 
+        if(empty($_POST['lastname']) || strlen($_POST['lastname']) <=1)
         {
-            $errors['utilisateur']['numero'] = "Veuiller renseigner un numéro de rue";
+            $errors['lastname'] = "Le champ Nom est obligatoire et doit contenir plus d'un caractère";
         }
 
-        if (empty($_POST['utilisateur']['rue'])) 
+        if(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
         {
-            $errors['utilisateur']['rue'] = "Le champ Rue est obligatoire";
+            $errors['email'] = "Le champ Email est obligatoire et doit contenir une adresse email valide";
         }
 
-        if (empty($_POST['utilisateur']['code_postal']) || !ctype_digit($_POST['utilisateur']['zip_code'])) 
+        if(empty($_POST['password']))
         {
-            $errors['utilisateur']['code_postal'] = "Le Code Postal renseigné n'est pas valide";
+            $errors['password'] = "Le champ Mot de passe est obligatoire";
         }
 
-        if (empty($_POST['utilisateur']['ville']) || strlen($_POST['utilisateur']['city']) <= 1) 
+        if(empty($_POST['phone_number']) || !ctype_digit($_POST['phone_number']))
         {
-            $errors['utilisateur']['ville'] = "Le champ ville est obligatoire et doit contenir plus d'un caractère";
+            $errors['phone_number'] = "Le numéro de téléphone n'est pas valide";
         }
 
-        if (empty($_POST['utilisateur']['role_id']) || !ctype_digit($_POST['utilisateur']['role_id'])) 
+        if(empty($_POST['street_number']) || !ctype_alnum($_POST['street_number']))
         {
-            $errors['utilisateur']['role_id'] = "Le champ Rôle doit être un nombre entier";
+            $errors['street_number'] = "Veuiller renseigner un numéro de rue";
         }
+    
+        if(empty($_POST['street']) || strlen($_POST['street']) <=1)
+        {
+            $errors['street'] = "Le champ Rue est obligatoire";
+        }
+
+        if(empty($_POST['zip_code']) || !ctype_digit($_POST['zip_code']))
+        {
+            $errors['zip_code'] = "Le Code Postal renseigné n'est pas valide";
+        }
+
+        if(empty($_POST['city']) || strlen($_POST['city']) <=1)
+        {
+            $errors['city'] = "Le champ ville est obligatoire et doit contenir plus d'un caractère";
+        }
+
+        if(empty($_POST['role_id']))
+        {
+            $errors['role_id'] = "Veuiller cocher l'un des trois rôles";
+        }
+        
         
         if(empty($errors))
         {
+            // Utilisation d'un grain de sel
+            $salt = "fil-rouge";
+
+            // Ajout du grain de sel au mot de passe
+            $mdpHache = $_POST['password'] . $salt;
+        
+            // Hachage du mot de passe
+            $newMdp =  password_hash($mdpHache, PASSWORD_DEFAULT);
 
             $query = $dbh->prepare("UPDATE utilisateur SET prenom, nom, email, password, telephone, numero, rue, code_postal, ville, Id_role FROM utilisateur WHERE id_utilisateur = :id_utilisateur");
-            $query->execute($_POST['utilisateur']);
+            $query->execute([
+                'nom' => $_POST['lastname'],
+                'prenom' => $_POST['firstname'],
+                'email' => $_POST['email'],
+                'password' => $newMdp,
+                'telephone' => $_POST['phone_number'],
+                'numero' => $_POST['street_number'],
+                'rue' => $_POST['street'],
+                'code_postal' => $_POST['zip_code'],
+                'ville' => $_POST['city'],
+                'Id_role' => $_POST['role_id']
+            ]);
 
             if($query->rowCount() > 0){
                 header("Location: /?page=users");
