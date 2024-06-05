@@ -3,16 +3,9 @@
     <div>
         <a href="/?page=add-lesson"><button class="button">Créer une formation</button></a>
     </div>
-    <div>
-        <form action="" method="GET" class="search">
-            <input type="text" name="search" id="search" placeholder="Rechercher une formation">
-            <button class="button" type="submit" name="search_submit">Rechercher</button>
-        </form>
-    </div>
     <table class="table">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nom de la formation</th>
                 <th>Date de début</th>
                 <th>Date de fin</th>
@@ -24,7 +17,6 @@
         <tbody>
             <?php foreach ($lesson as $lessons) : ?>
                 <tr>
-                    <td><?= $lessons['id_formation'] ?></td>
                     <td><?= $lessons['nom_formation'] ?></td>
                     <td><?= $lessons['date_debut'] ?></td>
                     <td><?= $lessons['date_fin'] ?></td>

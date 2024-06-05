@@ -99,7 +99,7 @@ body{
 
 
     /*Style du CRUD*/
-.search{
+.lesson-button{
     display: flex;
     flex-direction: row;
     justify-content: end;

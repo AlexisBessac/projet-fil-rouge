@@ -27,19 +27,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
         $errors['password'] = "Le champ Mot de passe est obligatoire";
     }
 
-    if (empty($_POST['phone_number']) || !ctype_digit($_POST['phone_number']))
+    if (empty($_POST['phone_number']) || !ctype_digit($_POST['phone_number'])) 
     {
         $errors['phone_number'] = "Le numéro de téléphone n'est pas valide";
     }
 
     if (empty($_POST['street_number']) || !ctype_alnum($_POST['street_number'])) 
     {
-        $errors['street_number'] = "Veuiller renseigner un numéro de rue";
+        $errors['street_number'] = "Veuillez renseigner un numéro de rue valide";
     }
 
     if (empty($_POST['street']) || strlen($_POST['street']) <= 1) 
     {
-        $errors['street'] = "Le champ Rue est obligatoire";
+        $errors['street'] = "Le champ Rue est obligatoire et doit contenir plus d'un caractère";
     }
 
     if (empty($_POST['zip_code']) || !ctype_digit($_POST['zip_code'])) 
@@ -49,12 +49,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
 
     if (empty($_POST['city']) || strlen($_POST['city']) <= 1) 
     {
-        $errors['city'] = "Le champ ville est obligatoire et doit contenir plus d'un caractère";
+        $errors['city'] = "Le champ Ville est obligatoire et doit contenir plus d'un caractère";
     }
 
     if (empty($_POST['role_id'])) 
     {
-        $errors['role_id'] = "Veuiller cocher l'un des trois rôles";
+        $errors['role_id'] = "Veuillez cocher l'un des trois rôles";
     }
 
     if (empty($errors)) 
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
         if ($utilisateurId) 
         {
             $errors['email'] = "Un compte existe déjà pour cette adresse mail";
-        }
+        } 
         else 
         {
             // Utilisation d'un grain de sel
@@ -78,8 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
             $mdpHache = $_POST['password'] . $salt;
 
             // Hachage du mot de passe
-            $newMdp =  password_hash($mdpHache, PASSWORD_DEFAULT);
-
+            $newMdp = password_hash($mdpHache, PASSWORD_DEFAULT);
 
             $query = $dbh->prepare("INSERT INTO utilisateur(nom, prenom, email, password, telephone, numero, rue, code_postal, ville, Id_role) VALUES(:nom, :prenom, :email, :password, :telephone, :numero, :rue, :code_postal, :ville, :Id_role)");
             $query->execute([
@@ -95,17 +94,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
                 'Id_role' => htmlspecialchars($_POST['role_id'])
             ]);
 
-            if ($dbh->lastInsertId()) {
+            if ($dbh->lastInsertId()) 
+            {
                 header('Location: /?page=connexion');
                 exit;
             } 
             else 
             {
-                $errors['form'] = "Une erreur s'est produit lors de l'inscription. Contacter l'administrateur à l'adresse [email].";
+                $errors['form'] = "Une erreur s'est produite lors de l'inscription. Veuillez contacter l'administrateur à l'adresse [email].";
             }
         }
     }
 }
 
-$title = "S'inscire";
+$title = "S'inscrire";
 $description = "Page d'inscription à Formula'Air";
