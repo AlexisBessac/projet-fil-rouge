@@ -3,6 +3,7 @@
     <div>
         <a href="/?page=add-lesson"><button class="button">Créer une formation</button></a>
     </div>
+    <div><a href="/?page=users"><button class="lesson">Liste des utilisateurs</button></a></div>
     <table class="table">
         <thead>
             <tr>

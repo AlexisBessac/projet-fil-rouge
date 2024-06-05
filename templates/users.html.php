@@ -4,10 +4,7 @@
         <a href="/?page=add-user"><button class="button">Créer un utilisateur</button></a>
     </div>
     <div>
-        <a href="/?page=lessons"><button class="lesson-button">Liste des Formations</button></a>
-        <?php if (isset($resultCount)) : ?>
-            <h2><?= htmlspecialchars($resultCount); ?> résultats correspondants à votre recherche "<?= htmlspecialchars($search); ?>".</h2>
-        <?php endif; ?>
+        <a href="/?page=lessons"><button class="lesson">Liste des Formations</button></a>
     </div>
     <table class="table">
         <thead>
