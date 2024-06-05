@@ -239,7 +239,8 @@ form div input {
     align-items: center; 
     margin-top: 20px;  
     margin-right: 20px; 
-    margin-left: 50px; 
+    margin-left: 50px;
+    padding-top: 30px; 
 }
 
 .register-button{

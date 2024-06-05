@@ -72,8 +72,7 @@
         <div class="role-utilisateur">
             <label for="role_id">Role de l'utilisateur</label>
             <?php foreach ($roles as $role) : ?>
-                <?php $is_admin = trim(strtolower($role['nom_role'])) === 'administrateur'; ?>
-                <div class="<?= $is_admin ? 'hidden' : '' ?>">
+                <div>
                     <label for="role_id_<?= htmlspecialchars($role['Id_role']) ?>"><?= htmlspecialchars($role['nom_role']) ?></label>
                     <input type="radio" name="role_id" id="role_id_<?= htmlspecialchars($role['Id_role']) ?>" value="<?= htmlspecialchars($role['Id_role']) ?>">
                 </div>

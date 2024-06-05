@@ -72,7 +72,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user_submit']))
         $newMdp =  password_hash($mdpHache, PASSWORD_DEFAULT);
 
         require '../src/data/db-connect.php';
-        $query = $dbh->prepare("INSERT INTO utilisateur(nom, prenom, email, password, telephone, numero, rue, code_postal, ville, Id_role) VALUES(:nom, :prenom, :email, :password, :telephone, :numero, :rue, :code_postal, :ville, :Id_role)");
+        $query = $dbh->prepare("INSERT INTO utilisateur(nom, prenom, email, password, telephone, numero, rue, code_postal, ville, id_role) VALUES(:nom, :prenom, :email, :password, :telephone, :numero, :rue, :code_postal, :ville, :id_role)");
         $query->execute([
             'nom' => $_POST['lastname'],
             'prenom' => $_POST['firstname'],
@@ -83,7 +83,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user_submit']))
             'rue' => $_POST['street'],
             'code_postal' => $_POST['zip_code'],
             'ville' => $_POST['city'],
-            'Id_role' => $_POST['role_id']
+            'id_role' => $_POST['role_id']
         ]);
 
         if(!$dbh->lastInsertId())
