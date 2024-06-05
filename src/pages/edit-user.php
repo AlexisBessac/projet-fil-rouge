@@ -32,11 +32,6 @@ if(!empty($_GET['id']))
             $errors['email'] = "Le champ Email est obligatoire et doit contenir une adresse email valide";
         }
 
-        if(empty($_POST['password']))
-        {
-            $errors['password'] = "Le champ Mot de passe est obligatoire";
-        }
-
         if(empty($_POST['phone_number']) || !ctype_digit($_POST['phone_number']))
         {
             $errors['phone_number'] = "Le numéro de téléphone n'est pas valide";
@@ -70,21 +65,11 @@ if(!empty($_GET['id']))
         
         if(empty($errors))
         {
-            // Utilisation d'un grain de sel
-            $salt = "fil-rouge";
-
-            // Ajout du grain de sel au mot de passe
-            $mdpHache = $_POST['password'] . $salt;
-        
-            // Hachage du mot de passe
-            $newMdp =  password_hash($mdpHache, PASSWORD_DEFAULT);
-
-            $query = $dbh->prepare("UPDATE utilisateur SET prenom, nom, email, password, telephone, numero, rue, code_postal, ville, Id_role FROM utilisateur WHERE id_utilisateur = :id_utilisateur");
+            $query = $dbh->prepare("UPDATE utilisateur SET prenom = :prenom, nom = :nom, email = :email, telephone = :telephone, numero = :numero, rue = :rue, code_postal = :code_postal, ville = :ville, Id_role = :Id_role WHERE id_utilisateur = :id_utilisateur");
             $query->execute([
                 'nom' => $_POST['lastname'],
                 'prenom' => $_POST['firstname'],
                 'email' => $_POST['email'],
-                'password' => $newMdp,
                 'telephone' => $_POST['phone_number'],
                 'numero' => $_POST['street_number'],
                 'rue' => $_POST['street'],
@@ -106,7 +91,7 @@ if(!empty($_GET['id']))
 
 
     // On recupère les données (modifiable) de l'utilisateur
-    $query = $dbh->prepare("SELECT prenom, nom, email, password, telephone, numero, rue, code_postal, ville, Id_role FROM utilisateur WHERE id_utilisateur = :id_utilisateur");
+    $query = $dbh->prepare("SELECT prenom, nom, email, telephone, numero, rue, code_postal, ville, Id_role FROM utilisateur WHERE id_utilisateur = :id_utilisateur");
     $query->execute([
         'id_utilisateur' => $_GET['id']
     ]);
