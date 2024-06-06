@@ -362,3 +362,42 @@ form div input {
     border-radius: 4px;
     cursor: pointer;
   }
+
+
+    /* Style de la page des documents à fournir pour postuler dans une formation */
+.document-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.document-list li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.document-item {
+    background: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.document-item h2 {
+    color: #181C8B;
+}
+
+.document-description {
+    margin-top: 10px;
+}
