@@ -107,6 +107,7 @@ body{
     margin-bottom: 10px;
     background-color: #181C8B;
     color: #fefefe;
+    cursor: pointer;
 }
 
 table {
