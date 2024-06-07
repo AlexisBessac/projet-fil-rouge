@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_login']))
 
     if(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
     {
-        $errors['email'] = 'Le champ Email est obligatoire et être une adresse email valide';
+        $errors['email'] = 'Le champ Email est obligatoire et doit être une adresse email valide';
     }
 
     if(empty($_POST['password']))
@@ -24,7 +24,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_login']))
 
         // Vérification de l'email en BDD
         $email = $_POST['email'];
-        $query = $dbh->prepare("SELECT * FROM utilisateur WHERE email = :email");
+        $query = $dbh->prepare("SELECT u.*, r.nom_role 
+                                FROM utilisateur u 
+                                LEFT JOIN role r ON u.Id_role = r.Id_role 
+                                WHERE u.email = :email");
+
         $query->execute(['email' => $email]);
         $user = $query->fetch();
 
@@ -39,8 +43,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_login']))
                 // Ouverture de la session
                 session_start();
                 $_SESSION['id'] = $user['id'];
-               
-                header('Location: /?page=dashboard');
+                $_SESSION['role'] = $user['nom_role'];  // Stocke le rôle de l'utilisateur dans la session
+
+                if(strtolower($user['nom_role']) == 'administrateur')
+                {
+                    header('Location: /?page=users');
+                }
+                else
+                {
+                    header('Location: /?page=dashboard');
+                }
                 exit;
             }
             else
