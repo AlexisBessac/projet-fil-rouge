@@ -5,6 +5,8 @@ $description = "La page pour modifier un utilisateur";
 
 require '../src/pages/role.php';
 
+$email = "";
+
 if(!empty($_GET['id']))
 {
     require '../src/data/db-connect.php';
@@ -102,6 +104,15 @@ if(!empty($_GET['id']))
         exit;
     }
 
+    $firstname = $user['prenom'];
+    $lastname = $user['nom'];
+    $email = $user['email'];
+    $phone_number = $user['telephone'];
+    $street_number = $user['numero'];
+    $street = $user['rue'];
+    $zip_code = $user['code_postal'];
+    $city = $user['ville'];
+    $role_id = $user['Id_role'];
 }
 else
 {
