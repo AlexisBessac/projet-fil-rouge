@@ -1,20 +1,14 @@
 <?php
 
-if (!empty($_GET['lesson_id'])) {
+if(!empty($_POST['lesson_id']))
+{
     require '../src/data/db-connect.php';
 
-    $id_formation = $_GET['lesson_id'];
-
     $query = $dbh->prepare("DELETE FROM formation WHERE id_formation = :id_formation");
-    $result = $query->execute([
-        'id_formation' => $id_formation,
+    $query->execute([
+        'id_formation' => $_POST['lesson_id'],
     ]);
-
-    header("Location: /?page=lessons");
-    exit;
-} 
-else 
-{
-    echo "Erreur : ID de la formation manquant.";
-    exit;
 }
+
+header("Location: /?page=lessons");
+exit;
