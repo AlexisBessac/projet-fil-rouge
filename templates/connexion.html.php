@@ -3,7 +3,7 @@
     <form action="" method="POST" class="form-login">
         <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="john.doe@domaine.com">
+            <input type="email" name="email" id="email" placeholder="Ex. john.doe@domaine.com">
             <?php if (isset($errors) && !empty($errors['email'])) : ?>
                 <div class="ajout-error">
                     <?= htmlspecialchars($errors['email']) ?>
