@@ -82,6 +82,8 @@
                 <div class="ajout-error"><?= htmlspecialchars($errors['role_id']) ?></div>
             <?php endif; ?>
         </div>
-        <input type="submit" class="button register-button" title="S'inscrire" name="form_inscribe_submit" value="S'inscrire"></input>
+        <div>
+            <button type="submit" class="button register-button" title="S'inscrire" name="form_inscribe_submit">S'inscrire</button>
+        </div>
     </form>
 </div>

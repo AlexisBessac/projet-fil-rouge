@@ -59,6 +59,12 @@ if (!empty($_GET['id'])) {
         echo "Formation inexistante";
         exit;
     }
+
+    $lessonName = $lesson['nom_formation'];
+    $lessonStart = $lesson['date_debut'];
+    $lessonEnd = $lesson['date_fin'];
+    $lessonPlace = $lesson['lieu'];
+    $lessonCity = $lesson['ville'];
 } else {
     echo "Erreur : id de la formation manquant";
     exit;

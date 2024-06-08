@@ -76,6 +76,8 @@
                 <div class="ajout-error"><?= htmlspecialchars($errors['role_id']) ?></div>
             <?php endif; ?>
         </div>
-        <input type="submit" class="button register-button" title="Modifier un utilisateur" name="edit_user_submit" value="Modifier un utilisateur"></input>
+        <div>
+            <button type="submit" class="button register-button" title="Modifier un utilisateur" name="edit_user_submit">Modifier</button>
+        </div>
     </form>
 </div>
