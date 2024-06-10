@@ -1,13 +1,13 @@
 <div class="container">
     <h1>Liste des utilisateurs</h1>
     <div>
-        <a href="/?page=add-user"><button class="button">Créer un utilisateur</button></a>
+        <a href="/?page=add-user"><button class="button" title="Créer un utilisateur">Créer un utilisateur</button></a>
     </div>
     <div>
-        <a href="/?page=lessons"><button class="lesson">Liste des Formations</button></a>
+        <a href="/?page=lessons"><button class="lesson" title="Liste des Formations">Liste des Formations</button></a>
     </div>
     <div class="button-container">
-        <a href="/?page=connexion"><button class="button">Se Déconnecter</button></a>
+        <a href="/?page=connexion"><button class="button" title="Se Déconnecter">Se Déconnecter</button></a>
     </div>
     <table class="table">
         <thead>
@@ -33,12 +33,12 @@
                     <td><?= $users['code_postal'] ?></td>
                     <td><?= $users['ville'] ?></td>
                     <td>
-                        <a href="/?page=edit-user&id=<?= $users['id_utilisateur'] ?>" class="button">Modifier</a>
+                        <a href="/?page=edit-user&id=<?= $users['id_utilisateur'] ?>" class="button" title="Modifier">Modifier</a>
                     </td>
                     <td>
                         <form action="/?page=delete-user" method="POST" onsubmit="return confirm('Are you sure ?')">
                             <input type="hidden" name="user_id" value="<?= $users['id_utilisateur'] ?>" />
-                            <button class="delete__button" type="submit">Supprimer</button>
+                            <button class="delete__button" type="submit" title="Supprimer">Supprimer</button>
                         </form>
                     </td>
                 </tr>

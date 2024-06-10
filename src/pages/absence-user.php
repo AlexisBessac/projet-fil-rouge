@@ -1,4 +1,4 @@
 <?php
 
-$ttile = "Mes absences";
+$title = "Mes absences";
 $description = "L'utilisateur peut voir ses absences et les déclarer";

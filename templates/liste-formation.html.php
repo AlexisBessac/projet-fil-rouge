@@ -1,6 +1,6 @@
-< class="container">
+<div class="container">
     <h1>Formations</h1>
-    <a href="/?page=dashboard"><button class="button">Revenir sur mon tableau de bord</button></a>
+    <a href="/?page=dashboard"><button class="button" title="Revenir sur mon tableau de bord">Revenir sur mon tableau de bord</button></a>
     <div class="card-container">
     <?php foreach($formations as $formation) : ?>
         <div class="card">
@@ -16,7 +16,7 @@
                 </p>
                 <p class="card-text"><?= $formation['lieu'] ?></p>
                 <p class="card-text"><?= $formation['ville']?></p>
-                <a href="/?page=apply" class="btn">Postuler à cette formation</a>
+                <a href="/?page=apply" class="btn" title="Postuler à une formation">Postuler à cette formation</a>
             </div>
         </div>
     <?php endforeach; ?>
