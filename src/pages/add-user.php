@@ -87,14 +87,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user_submit']))
             'Id_role' => $_POST['role_id']
         ]);
 
-        if ($user) 
+        if(!$dbh->lastInsertId())
         {
-            header('Location: /?page=users');
-            exit;
-        } 
-        else 
-        {
-            $errors['error'] = "Erreur lors de la création de l'utilisateur.";
+            $errors['error'] = "Erreur lors de la création de l'utilsateur";
         }
+
+        header('Location: /?page=users');
+        exit;
     }
 }
