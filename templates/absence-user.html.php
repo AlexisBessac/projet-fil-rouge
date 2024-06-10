@@ -17,7 +17,7 @@
                     <input type="date" name="date_debut_absence" id="date_debut_absence">
                 </div>
                 <div>
-
+                    
                 </div>
                 <div>
                     <button class="button reguster-buttonr" name="submit_form_upload" type="submit" title="Trasmettre mon absnce">Transmettre mon absence</button>
