@@ -28,14 +28,15 @@
     <footer class="footer">
         <div class="grid">
             <div>
-                <img src="" alt="">
+                <img src="" alt="logo de Formul'Air">
             </div>
             <div class="legals">
                 <p>Page de confidentialité</p>
                 <p>Mentions légales</p>
             </div>
             <div class="copyrights">
-                <p>Tous Droits Réservés Alexis Bessac 2024</p>
+                <p>Tous Droits Réservés</p>
+                <p>Alexis Bessac 2024</p>
             </div>
         </div>
     </footer>

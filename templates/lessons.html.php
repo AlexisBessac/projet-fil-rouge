@@ -6,6 +6,9 @@
     <div>
         <a href="/?page=users"><button class="lesson" title="Liste des utilisateurs">Liste des utilisateurs</button></a>
     </div>
+    <div class="button-container">
+        <a href="/?page=connexion"><button class="button" title="Se Déconnecter">Se Déconnecter</button></a>
+    </div>
     <table class="table">
         <thead>
             <tr>
