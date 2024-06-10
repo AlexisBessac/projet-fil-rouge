@@ -1,444 +1,509 @@
-    /*Style Généraux du site*/
-*{
-    box-sizing: border-box;
-}
-
-.container{
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-h1{
-    color: #181C8B;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    margin-top: 20px;
-}
-
-a{
-    text-decoration: none;
-}
-
-body{
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.button{
-    color: #fefefe;
-    background-color: #181C8B;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.header{
-    background-color: #181C8B;
-}
-
-
-    /* Style du footer */
-.footer{
-    background-color: #181C8B;
-    color: #fefefe;
-    margin-top: 10px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Trois colonnes égales */
-    gap: 20px; /* Espace entre les colonnes */
-    align-items: center; /* Alignement vertical au centre */
-}
-
-.legals{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.copyrights{
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-}
-
-
-    /* Style de la page d'accueil */
-.button-container{
-    display: flex;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    gap:10px ;
-}
-
-.login{
-    color: #fefefe;
-    background-color: #181C8B;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.punchline{
-    text-align: center;
-    margin-top: 50px;
-}
-
-
-    /* Style de la page 404 */
-.error{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #181C8B;
-}
-
-
-    /*Style du CRUD*/
-.lesson{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    margin-bottom: 10px;
-    background-color: #181C8B;
-    color: #fefefe;
-    cursor: pointer;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-tr:nth-child(even) td {
-    background-color: #181C8B;
-    color: #fefefe;
-}
-
-tr:nth-child(odd) td {
-    background-color: #fefefe;
-    color: #181C8B;
-}
-
-td{
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #181C8B;
-}
-
-th{
-    background-color: #181C8B;
-    color: #fefefe;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.delete__button{
-    background-color: #ff0000;
-    color: #fefefe;
-    cursor: pointer;
-}
-
-.ajout-button{
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.cancel-button{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.edit_user_button{
-    display: block;
-    background-color: #181C8B;
-    color: #fefefe;
-    width: 90% ;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-
-    /* Texte s'il n'y à aucune information trouvé dans le tableau utilisateur ou formation */
-.text-user{
-    background-color: #fefefe;
-    color: #181C8B;
-    text-align: center;
-}
-
-    /* Style du CRUD des formations */
-.formation{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 20px;
-}
-
-
-    /* Style Généraux des formulaires */
-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-form div {
-    flex: 0 0 50%; /* Répartit les éléments sur deux colonnes */
-    padding: 0 10px; /* Espacement entre les colonnes */
-}
-
-form div label {
-    display: block; /* Affiche les labels sur une ligne */
-    font-weight: bold;
-}
-
-form div input {
-    width: 100%; /* Ajuste la largeur des champs de saisie */
-    margin-bottom: 20px; /* Espacement entre les champs */
-}
-
-.ajout-error{
-    display: block;
-    color: #ff0000;
-}
-
-.hidden{
-    display: none;
-}
-
-
-    /* Style du formulaire de la page s'Inscrire */
-.identite{
-    display: flex;
-    flex-direction: column;
-}
-
-.adresse-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.coordonne{
-    display: inline;
-    margin-right: 20px;
-    margin-left: 30px;
-}
-
-.role-utilisateur{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    margin-top: 20px;  
-    margin-right: 20px; 
-    margin-left: 50px;
-    padding-top: 30px; 
-}
-
-.register-button{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top:  10px;
-    color: #fefefe;
-    background-color: #181C8B;
-    width: 100%;
-    cursor: pointer;
-}
-
-
-    /* Style du formulaire de la page Se Connecter */
-.form-login{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.container_button{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.login_button{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    white-space: nowrap; /*Mets le texte sur une seule ligne*/
-    margin: 10px 10px;
-    cursor: pointer;
-}
-
-
-    /* Style du dashboard de l'utilisateur */
-.navbar {
-    text-align: center; /* Centre le contenu de la barre de navigation */
-}
-    
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: inline-block; /* Permet de centrer la liste */
-}
-    
-.navbar ul li {
-    display: inline; /* Affiche les éléments de la liste en ligne */
-    margin-right: 10px; /* Ajoute un espacement entre les éléments */
-}
-    
-.navbar ul li:last-child {
-    margin-right: 0; /* Enlève l'espacement à droite du dernier élément */
-}
-    
-.navbar ul li a .button {
-    text-decoration: none; /* Enlève le soulignement des liens */
-}
-
-
-    /* Style des cards de formation pour lesquelles 
-            l'utilisateur peut postuler  */
-
-.card-container {
-    display: flex; /* Utilise flexbox pour afficher les éléments en ligne */
-    flex-wrap: wrap; /* Permet de passer à la ligne suivante si nécessaire */
-    gap: 20px; /* Ajoute un espace entre les cartes */
-    justify-content: center; /* Centre les cartes horizontalement */
-    padding: 20px; /* Ajoute un padding autour du conteneur */
-}
-
-.card {
-    width: 25%;
-    background-color: #181C8B;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 20px 10px;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .card-body {
-    padding: 16px;
-    color: #fefefe;
-  }
-
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #fefefe;
-    display: flex;
-    text-align: center;
-  }
-
-  .card-text {
-    font-size: 14px;
-    color: #fefefe;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 8px 16px;
-    margin-top: 12px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #181C8B;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-/* Responsive de la page des formations que peut voir l'utilisateur */
-@media (max-width: 768px) {
-    .card {
-        width: 50%;
+        /*Style Généraux du site*/
+    * {
+        box-sizing: border-box;
     }
-}
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: #181C8B;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        margin-top: 20px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .button {
+        color: #fefefe;
+        background-color: #181C8B;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .header {
+        background-color: #181C8B;
+    }
 
 
-    /* Style de la page des documents à fournir pour postuler dans une formation */
-.document-list ul {
-    list-style-type: none;
-    padding: 0;
-}
+        /* Style du footer */
+    .footer {
+        background-color: #181C8B;
+        color: #fefefe;
+        margin-top: 10px;
+    }
 
-.document-list li {
-    background: #ffffff;
-    margin: 10px 0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 20px;
+        align-items: center;
+    }
 
-.container-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+    .legals {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.document-item {
-    background: #ffffff;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 300px;
-    text-align: center;
-}
-
-.document-item h2 {
-    color: #181C8B;
-}
-
-.document-description {
-    margin-top: 10px;
-}
+    .copyrights {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
 
 
-    /* Style du formulaire pour déclarer une absence 
+        /* Style de la page d'accueil */
+    .button-container {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        gap: 10px;
+    }
+
+    .login {
+        color: #fefefe;
+        background-color: #181C8B;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .punchline {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+
+        /* Style de la page 404 */
+    .error {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #181C8B;
+    }
+
+
+        /*Style du CRUD*/
+    .lesson {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        margin-bottom: 10px;
+        background-color: #181C8B;
+        color: #fefefe;
+        cursor: pointer;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    tr:nth-child(even) td {
+        background-color: #181C8B;
+        color: #fefefe;
+    }
+
+    tr:nth-child(odd) td {
+        background-color: #fefefe;
+        color: #181C8B;
+    }
+
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #181C8B;
+    }
+
+    th {
+        background-color: #181C8B;
+        color: #fefefe;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .delete__button {
+        background-color: #ff0000;
+        color: #fefefe;
+        cursor: pointer;
+    }
+
+    .ajout-button {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .cancel-button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .edit_user_button {
+        display: block;
+        background-color: #181C8B;
+        color: #fefefe;
+        width: 90%;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+
+        /* Texte s'il n'y à aucune information trouvé dans le tableau utilisateur ou formation */
+    .text-user {
+        background-color: #fefefe;
+        color: #181C8B;
+        text-align: center;
+    }
+
+        /* Style du CRUD des formations */
+    .formation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+
+        /* Style Généraux des formulaires */
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    form div {
+        flex: 0 0 50%;
+        /* Répartit les éléments sur deux colonnes */
+        padding: 0 10px;
+        /* Espacement entre les colonnes */
+    }
+
+    form div label {
+        display: block;
+        /* Affiche les labels sur une ligne */
+        font-weight: bold;
+    }
+
+    form div input {
+        width: 100%;
+        /* Ajuste la largeur des champs de saisie */
+        margin-bottom: 20px;
+        /* Espacement entre les champs */
+    }
+
+    .ajout-error {
+        display: block;
+        color: #ff0000;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+
+        /* Style du formulaire de la page s'Inscrire */
+    .identite {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .adresse-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .coordonne {
+        display: inline;
+        margin-right: 20px;
+        margin-left: 30px;
+    }
+
+    .role-utilisateur {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-left: 50px;
+        padding-top: 30px;
+    }
+
+    .register-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        color: #fefefe;
+        background-color: #181C8B;
+        width: 100%;
+        cursor: pointer;
+    }
+
+        /* Responsive de la page d'inscription */
+    @media screen and (max-width: 768px) {
+        .identite div,
+        .coordonne div,
+        .adresse-form div,
+        .role-utilisateur div {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    
+        .identite div input,
+        .coordonne div input,
+        .adresse-form div input,
+        .role-utilisateur div input,
+        span {
+            width: 100%;
+        }
+    }
+
+        /* Style du formulaire de la page Se Connecter */
+    .form-login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container_button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .login_button {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        white-space: nowrap;
+        margin: 10px 10px;
+        cursor: pointer;
+    }
+
+        /* Responsive de la page Se Connecter */
+    @media screen and (max-width: 768px) {
+        .container {
+            max-width: 100%; /* Pleine largeur sur les petits écrans */
+        }
+    
+        .container_button {
+            flex-direction: column; /* Affichage des boutons en colonne */
+            align-items: stretch; /* Extension des boutons pour remplir l'espace */
+        }
+    
+        .container_button input,
+        .container_button button {
+            margin-bottom: 10px; /* Espacement entre les boutons */
+        }
+    }
+
+
+        /* Style du dashboard de l'utilisateur */
+    .navbar {
+        text-align: center;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .navbar ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    .navbar ul li:last-child {
+        margin-right: 0;
+    }
+
+    .navbar ul li a .button {
+        text-decoration: none;
+    }
+
+        /* Responsive du dashboard de l'utilisateur */
+    @media screen and (max-width: 768px) {
+        .container {
+            padding: 10px; /* Réduire l'espacement sur les petits écrans */
+        }
+    
+        .button-container {
+            margin-bottom: 20px; /* Ajouter de l'espace sous le bouton de déconnexion */
+        }
+    
+        .navbar ul li {
+            display: block;
+            margin-bottom: 10px; /* Ajouter de l'espace entre les éléments de la navigation */
+        }
+    }
+
+
+        /* Style des cards de formation pour lesquelles 
+                l'utilisateur peut postuler  */
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .card {
+        width: 25%;
+        background-color: #181C8B;
+        border-radius: 25px;
+        overflow: hidden;
+        margin: 20px 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-body {
+        padding: 16px;
+        color: #fefefe;
+    }
+
+    .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #fefefe;
+        display: flex;
+        text-align: center;
+    }
+
+    .card-text {
+        font-size: 14px;
+        color: #fefefe;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 8px 16px;
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #181C8B;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        /* Responsive de la page des formations que peut voir l'utilisateur */
+    @media (max-width: 768px) {
+        .card {
+            width: 50%;
+        }
+    }
+
+
+        /* Style de la page des documents à fournir pour postuler dans une formation */
+    .document-list ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .document-list li {
+        background: #ffffff;
+        margin: 10px 0;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .document-item {
+        background: #ffffff;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .document-item h2 {
+        color: #181C8B;
+    }
+
+    .document-description {
+        margin-top: 10px;
+    }
+
+        /* Responsive pour la page des documents à fournir0
+                     pour la formation */
+    @media screen and (max-width: 768px) {
+        .card {
+            max-width: 100%;
+            margin: 20px auto;
+        }
+    }
+
+
+        /* Style du formulaire pour déclarer une absence 
                     pour un utilisateur */
-.form-absence{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-    /* Responsive de la page absence pour les utilisateurs */
-@media (max-width: 768px) {
     .form-absence {
         display: flex;
         flex-direction: column;
-        align-items: stretch;
+        justify-content: center;
+        align-items: center;
     }
 
-    .form-absence div {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
+    /* Responsive de la page absence pour les utilisateurs */
+    @media (max-width: 768px) {
+        .form-absence {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
 
-    .form-absence label {
-        margin-bottom: 5px;
-    }
+        .form-absence div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .form-absence input,
-    .form-absence button {
-        width: 100%;
+        .form-absence label {
+            margin-bottom: 5px;
+        }
+
+        .form-absence input,
+        .form-absence button {
+            width: 100%;
+        }
     }
-}
