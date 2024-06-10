@@ -6,7 +6,7 @@
             <form action="" method="POST" class="form-absence">
                 <div>
                     <label for="user_file">Parcourir</label>
-                    <input type="file" name="user_file" id="user_File">
+                    <input type="file" name="user_file" id="user_file">
                 </div>
                 <div>
                     <label for="absence-text">Motif de l'absence</label>
@@ -20,7 +20,7 @@
 
                 </div>
                 <div>
-                    <button class="button reguster-buttonr" name="user_file" type="submit" title="Trasmettre mon absnce">Transmettre mon absence</button>
+                    <button class="button reguster-buttonr" name="submit_form_upload" type="submit" title="Trasmettre mon absnce">Transmettre mon absence</button>
                 </div>
             </form>
         </div>
