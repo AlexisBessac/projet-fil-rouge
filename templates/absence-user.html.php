@@ -16,9 +16,7 @@
                     <label for="date_debut_absence">Date du début de l'absence</label>
                     <input type="date" name="date_debut_absence" id="date_debut_absence">
                 </div>
-                <div>
-                    
-                </div>
+                <div class="dropzone">Où faites glisser vos documents ici</div>
                 <div>
                     <button class="button reguster-buttonr" name="submit_form_upload" type="submit" title="Trasmettre mon absnce">Transmettre mon absence</button>
                 </div>
