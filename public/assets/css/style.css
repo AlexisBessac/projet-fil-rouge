@@ -363,11 +363,12 @@ form div input {
     cursor: pointer;
   }
 
-  @media (max-width: 768px) {
-      .card {
-          width: 50%;
-      }
-  }
+/* Responsive de la page des formations que peut voir l'utilisateur */
+@media (max-width: 768px) {
+    .card {
+        width: 50%;
+    }
+}
 
 
     /* Style de la page des documents à fournir pour postuler dans une formation */
