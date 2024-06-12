@@ -57,9 +57,9 @@
         </div>
         <div class="coordonne">
             <label for="email">Email</label>
-            <input type="email" name="email_register" id="email_register" placeholder="Ex. john.doe@domaine.com">
-            <?php if (isset($errors) && !empty($errors['email_register'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['email_register']) ?></div>
+            <input type="email" name="email" id="email" placeholder="Ex. john.doe@domaine.com">
+            <?php if (isset($errors) && !empty($errors['email'])) : ?>
+                <div class="ajout-error"><?= htmlspecialchars($errors['email']) ?></div>
             <?php endif; ?>
         </div>
         <div>

@@ -12,8 +12,8 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Nom</th>
                 <th>Prénom</th>
+                <th>Nom</th>
                 <th>Email</th>
                 <th>Numéro</th>
                 <th>Rue</th>
@@ -25,8 +25,8 @@
         <tbody>
             <?php foreach ($user as $users) : ?>
                 <tr>
-                    <td><?= $users['nom'] ?></td>
                     <td><?= $users['prenom'] ?></td>
+                    <td><?= $users['nom'] ?></td>
                     <td><?= $users['email'] ?></td>
                     <td><?= $users['numero'] ?></td>
                     <td><?= $users['rue'] ?></td>
