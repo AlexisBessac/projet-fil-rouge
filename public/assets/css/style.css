@@ -89,6 +89,17 @@
         margin-top: 50px;
     }
 
+    /* Responsive de la page d'accueil */
+    @media (max-width: 768px) {
+        .login {
+            width: 100%;
+            font-size: 18px;
+        }
+    
+        .punchline p {
+            font-size: 16px;
+        }
+    }
 
         /* Style de la page 404 */
     .error {
@@ -98,6 +109,21 @@
         justify-content: center;
         color: #181C8B;
     }
+
+    @media (max-width: 768px) {
+        .error h1 {
+            font-size: 2em;
+        }
+    
+        .error p {
+            font-size: 1em;
+        }
+    
+        .error a {
+            padding: 8px 16px;
+        }
+    }
+    
 
 
         /*Style du CRUD*/
