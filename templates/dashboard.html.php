@@ -10,4 +10,10 @@
             <li><a href="/?page=late-user"><button class="button" title="Mes retards">Mes retards</button></a></li>
         </ul>
     </nav>
+    <section>
+        <p>Bienvenue <?= $user['prenom']; ?> <?= $user['nom']; ?></p>
+        <p>Votre adresse mail est la suivante <?= $user['email']; ?></p>
+        <p>Votre numéro de téléphone est le suivant <?= $user['telephone']; ?></p>
+        <p>Vous habitez au <?= $user['numero']; ?> <?= $user['rue']; ?> <?= $user['code_postal']; ?> <?= $user['ville']; ?></p>
+    </section>
 </div>
