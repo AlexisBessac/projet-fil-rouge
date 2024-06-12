@@ -36,7 +36,7 @@
                         <a href="/?page=edit-user&id=<?= $users['id_utilisateur'] ?>" class="button" title="Modifier">Modifier</a>
                     </td>
                     <td>
-                        <form action="/?page=delete-user" method="POST" onsubmit="return confirm('Are you sure ?')">
+                        <form action="/?page=delete-user" method="POST" onsubmit="return confirm('Etes vous sûr de vouloir supprimer cet utilisateur ?')">
                             <input type="hidden" name="user_id" value="<?= $users['id_utilisateur'] ?>" />
                             <button class="delete__button" type="submit" title="Supprimer">Supprimer</button>
                         </form>
