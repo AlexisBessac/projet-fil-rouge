@@ -14,7 +14,6 @@ if (!isset($_SESSION['id'])) {
 
 // Incluez le fichier de connexion à la base de données
 require '../src/data/db-connect.php';
-require '../src/pages/role.php';
 
 // Sélectionnez les données de l'utilisateur à partir de la base de données
 $query = $dbh->prepare("SELECT prenom, nom, email, telephone, numero, rue, code_postal, ville FROM utilisateur WHERE id_utilisateur = :id_utilisateur");

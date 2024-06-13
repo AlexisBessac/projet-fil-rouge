@@ -11,9 +11,12 @@
         </ul>
     </nav>
     <section>
-        <p>Bienvenue <?= $user['prenom']; ?> <?= $user['nom']; ?></p>
-        <p>Votre adresse mail est la suivante <?= $user['email']; ?></p>
-        <p>Votre numéro de téléphone est le suivant <?= $user['telephone']; ?></p>
-        <p>Vous habitez au <?= $user['numero']; ?> <?= $user['rue']; ?> <?= $user['code_postal']; ?> <?= $user['ville']; ?></p>
+        <div>
+            <h2>Informations Personnelles : </h2>
+            <p>Bienvenue <?= $user['prenom']; ?> <?= $user['nom']; ?></p>
+            <p>Votre adresse mail est la suivante <?= $user['email']; ?></p>
+            <p>Votre numéro de téléphone est le suivant <?= $user['telephone']; ?></p>
+            <p>Vous habitez au <?= $user['numero']; ?> <?= $user['rue']; ?> <?= $user['code_postal']; ?> <?= $user['ville']; ?></p>
+        </div>
     </section>
 </div>

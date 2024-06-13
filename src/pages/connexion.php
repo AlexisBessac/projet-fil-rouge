@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_login']))
                 // Authentification réussie
                 // Ouverture de la session
                 session_start();
-                $_SESSION['id'] = $user['id'];
+                $_SESSION['id'] = $user['id_utilisateur'];
                 $_SESSION['role'] = $user['nom_role'];  // Stocke le rôle de l'utilisateur dans la session
 
                 if(strtolower($user['nom_role']) == 'administrateur')
