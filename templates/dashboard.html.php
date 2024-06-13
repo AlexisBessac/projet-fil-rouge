@@ -10,13 +10,13 @@
             <li><a href="/?page=late-user"><button class="button" title="Mes retards">Mes retards</button></a></li>
         </ul>
     </nav>
-    <section>
-        <div>
-            <h2>Informations Personnelles : </h2>
-            <p>Bienvenue <?= $user['prenom']; ?> <?= $user['nom']; ?></p>
-            <p>Votre adresse mail est la suivante <?= $user['email']; ?></p>
-            <p>Votre numéro de téléphone est le suivant <?= $user['telephone']; ?></p>
-            <p>Vous habitez au <?= $user['numero']; ?> <?= $user['rue']; ?> <?= $user['code_postal']; ?> <?= $user['ville']; ?></p>
+    <section class="user-info-section container">
+        <div class="user-info-container">
+            <h2>Informations Personnelles :</h2>
+            <p>Bienvenue <span class="user-detail"><?= $user['prenom']; ?> <?= $user['nom']; ?></span></p>
+            <p>Mail : <span class="user-detail"><?= $user['email']; ?></span></p>
+            <p>Numéro de téléphone : <span class="user-detail"><?= $user['telephone']; ?></span></p>
+            <p>Adresse : <span class="user-detail"><?= $user['numero']; ?> <?= $user['rue']; ?> <?= $user['code_postal']; ?> <?= $user['ville']; ?></span></p>
         </div>
     </section>
 </div>

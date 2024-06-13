@@ -20,3 +20,10 @@ $query = $dbh->prepare("SELECT prenom, nom, email, telephone, numero, rue, code_
 
 $query->execute(['id_utilisateur' => $_SESSION['id']]);
 $user = $query->fetch();
+
+function formatPhoneNumber($number) {
+    // preg_replace est une fonction PHP utilisée pour effectuer des remplacements basés sur une expression régulière.
+    return preg_replace("/(\d{2})(?=\d)/", "$1 ", $number);
+}
+
+$user['telephone'] = formatPhoneNumber($user['telephone']);

@@ -374,23 +374,71 @@
         text-decoration: none;
     }
 
+    .user-info-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .user-info-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 500px;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .user-info-container h2 {
+        font-size: 24px;
+        color: #181C8B;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+    }
+    
+    .user-info-container p {
+        font-size: 18px;
+        color: #181C8B;
+        margin: 10px 0;
+        white-space: nowrap; /* Empêche les sauts de ligne */
+    }
+    
+    .user-detail {
+        font-weight: bold;
+        color: #181C8B;
+    }
+
         /* Responsive du dashboard de l'utilisateur */
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
         .container {
-            padding: 10px; /* Réduire l'espacement sur les petits écrans */
+            padding: 10px;
         }
     
-        .button-container {
-            margin-bottom: 20px; /* Ajouter de l'espace sous le bouton de déconnexion */
+        h1 {
+            font-size: 20px;
         }
     
-        .navbar ul li {
-            display: block;
-            margin-bottom: 10px; /* Ajouter de l'espace entre les éléments de la navigation */
+        .user-info-container h2 {
+            font-size: 20px;
+        }
+    
+        .user-info-container p {
+            font-size: 16px;
+        }
+    
+        .navbar ul {
+            flex-direction: column;
+        }
+    
+        .navbar .button {
+            max-width: 100%;
         }
     }
 
-
+    
         /* Style des cards de formation pour lesquelles 
                 l'utilisateur peut postuler  */
 
