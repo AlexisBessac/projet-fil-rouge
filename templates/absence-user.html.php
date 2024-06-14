@@ -3,7 +3,7 @@
     <a href="/?page=dashboard"><button class="button" title="Revenir sur mon tableau de bord">Revenir sur mon tableau de bord</button></a> 
     <section>
         <div>
-            <form action="" method="POST" class="form-absence">
+            <form action="" method="POST" enctype="multipart/form-data" class="form-absence">
                 <div>
                     <label for="user_file">Parcourir</label>
                     <input type="file" name="user_file" id="user_file">
