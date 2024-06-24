@@ -9,11 +9,11 @@
                     <input type="file" name="user_file" id="user_file">
                 </div>
                 <div>
-                    <label for="absence-text">Motif de l'absence</label>
+                    <label for="absence-text">Motif du retard</label>
                     <input type="text" name="absence-text" id="absence-text" placeholder="Maladie">
                 </div>
                 <div>
-                    <label for="date_debut_absence">Date du début de l'absence</label>
+                    <label for="date_debut_absence">Date du retard</label>
                     <input type="date" name="date_debut_absence" id="date_debut_absence">
                 </div>
                 <div class="dropzone">Où faites glisser vos documents ici</div>
