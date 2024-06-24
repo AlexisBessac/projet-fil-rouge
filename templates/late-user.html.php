@@ -18,7 +18,7 @@
                 </div>
                 <div class="dropzone">Où faites glisser vos documents ici</div>
                 <div>
-                    <button class="button reguster-buttonr" name="submit_form_upload" type="submit" title="Trasmettre mon absnce">Transmettre mon absence</button>
+                    <button class="button reguster-buttonr" name="submit_form_upload" type="submit" title="Trasmettre mon retard">Transmettre mon retard</button>
                 </div>
             </form>
         </div>
