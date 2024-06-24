@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Mes absences</h1>
+    <h1>Déclarer une absence</h1>
     <a href="/?page=dashboard"><button class="button" title="Revenir sur mon tableau de bord">Revenir sur mon tableau de bord</button></a> 
     <section>
         <div>

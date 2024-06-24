@@ -6,8 +6,8 @@
     <nav class="navbar">
         <ul>
             <li><a href="/?page=liste-formation"><button class="button" title="Postuler à une formation">Postuler à une formation</button></a></li>
-            <li><a href="/?page=absence-user"><button class="button" title="Mes absences">Mes absences</button></a></li>
-            <li><a href="/?page=late-user"><button class="button" title="Mes retards">Mes retards</button></a></li>
+            <li><a href="/?page=absence-user"><button class="button" title="Déclarer une absence">Déclarer une absence</button></a></li>
+            <li><a href="/?page=late-user"><button class="button" title="Déclarer un retard">Déclarer un retard</button></a></li>
         </ul>
     </nav>
     <section class="user-info-section container">
