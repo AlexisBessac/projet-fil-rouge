@@ -278,6 +278,12 @@
         padding-top: 30px;
     }
 
+    .password{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
     .register-button {
         display: flex;
         flex-direction: column;

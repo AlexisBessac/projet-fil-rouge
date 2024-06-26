@@ -61,6 +61,7 @@
                 <div class="ajout-error"><?= htmlspecialchars($errors['email_register']) ?></div>
             <?php endif; ?>
         </div>
+        <div class="password">
         <div>
             <label for="password">Mot de passe</label>
             <input type="password" name="password" id="password">
@@ -68,6 +69,14 @@
                 <?php if (isset($errors) && !empty($errors['password'])) : ?>
                     <div class="ajout-error"><?= htmlspecialchars($errors['password']) ?></div>
                 <?php endif; ?>
+        </div>
+        <div>
+            <label for="password">Confirmer votre mot de passe</label>
+            <input type="password" name="password" id="password">
+                <?php if (isset($errors) && !empty($errors['password'])) : ?>
+                    <div class="ajout-error"><?= htmlspecialchars($errors['password']) ?></div>
+                <?php endif; ?>
+        </div>
         </div>
         <div class="role-utilisateur">
             <label for="role_id">Role de l'utilisateur</label>
