@@ -49,6 +49,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_login']))
                 {
                     header('Location: /?page=users');
                 }
+                else if(strtolower($user['nom_role']) == 'responsable administratif')
+                {
+                    header('Location: /?page=dashboard-lesson');
+                }
                 else
                 {
                     header('Location: /?page=dashboard');
