@@ -21,7 +21,7 @@
                         <a href="/?page=edit-doc&id=<?= $docs['id_type'] ?>" class="button" title="Modifier">Modifier</a>
                     </td>
                     <td>
-                        <form action="/?page=delete-user" method="POST" onsubmit="return confirm('Etes vous sûr de vouloir supprimer cet type de document ?')">
+                        <form action="/?page=delete-doc" method="POST" onsubmit="return confirm('Etes vous sûr de vouloir supprimer cet type de document ?')">
                             <input type="hidden" name="type_id" value="<?= $docs['id_type'] ?>" />
                             <button class="delete__button" type="submit" title="Supprimer">Supprimer</button>
                         </form>

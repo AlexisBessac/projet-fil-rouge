@@ -4,11 +4,11 @@
     <form action="" method="POST">
         <div>
             <label for="nom_docs">Nom du document à transmettre</label>
-            <input type="text" name="nom_docs" id="nom_docs" placeholder="Ex. CV">
+            <input type="text" name="nom_docs" id="nom_docs" value="<?= htmlspecialchars($nom_docs);?>">
             <?php if (isset($errors) && !empty($errors['nom_docs'])) : ?>
                 <div class="ajout-error"><?= $errors['nom_docs'] ?></div>
             <?php endif; ?>
-            <button type="submit" name="add_docs_submit" id="edit_docs_submit" class="button" title="Modifier le document">Modifier le document</button>
+            <button type="submit" name="edit_docs_submit" id="edit_docs_submit" class="button" title="Modifier le document">Modifier le document</button>
         </div>
     </form>
 </div>

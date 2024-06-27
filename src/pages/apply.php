@@ -4,7 +4,7 @@ $title = "Document à fournir pour une formation";
 $description = "Sur cette page on trouve la liste des documents à fournir pour chaque formation";
 
 require '../src/data/db-connect.php';
-$sql_id = "SELECT id_formation FROM formation";
+$sql_id = "SELECT id_formation FROM formation LIMIT 1"; // Ajoutez des conditions de sélection si nécessaire
 $query_id = $dbh->prepare($sql_id);
 $query_id->execute();
 $result_id = $query_id->fetch();

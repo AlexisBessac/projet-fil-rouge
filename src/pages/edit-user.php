@@ -113,7 +113,7 @@ if(!empty($_GET['id']))
     $zip_code = $user['code_postal'];
     $city = $user['ville'];
     $role_id = $user['Id_role'];
-} else {
+    }else {
     echo "Erreur : id de l'utilisateur manquant";
     exit;
 }
