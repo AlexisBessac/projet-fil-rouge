@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Ajouter une formation</h1>
-    <a href="/?page=lessons"><button class="button cancel-button">Annuler</button></a>
+    <a href="/?page=lessons"><button class="button cancel-button" title="Annuler">Annuler</button></a>
     <form action="" method="POST">
         <div>
             <label for="lesson_name">Nom de la formation</label>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div>
-            <button type="submit" class="button register-button" name="add_lesson_submit">Ajouter une formation</button>
+            <button type="submit" class="button register-button" name="add_lesson_submit" title="Ajouter une formation">Ajouter une formation</button>
         </div>
     </form>
 </div>
