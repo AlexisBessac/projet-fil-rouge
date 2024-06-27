@@ -3,9 +3,12 @@
     <div>
         <a href="/?page=add-user"><button class="button" title="Créer un utilisateur">Créer un utilisateur</button></a>
     </div>
-    <div>
-        <a href="/?page=lessons"><button class="lesson" title="Liste des Formations">Liste des Formations</button></a>
-    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/?page=lessons"><button class="lesson" title="Liste des Formations">Liste des Formations</button></a></li>
+            <li><a href="/?page=docs"><button class="lesson" title="Documents à fournir dans le cadre d'une formation">Document à fournir dans le cadre d'une formation</button></a></li>
+        </ul>
+    </nav>
     <div class="button-container">
         <a href="/?page=connexion"><button class="button" title="Se Déconnecter">Se Déconnecter</button></a>
     </div>

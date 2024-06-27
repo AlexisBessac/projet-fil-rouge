@@ -300,7 +300,8 @@
         .identite div,
         .coordonne div,
         .adresse-form div,
-        .role-utilisateur div {
+        .role-utilisateur div
+        .password div {
             flex-direction: column;
             align-items: stretch;
         }
