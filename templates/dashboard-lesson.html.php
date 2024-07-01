@@ -12,7 +12,6 @@
                     <th>Raison du retard</th>
                     <th>Date du retard</th>
                     <th>Durée du retard</th>
-                    <th>Justificatif</th>
                     <th colspan="2">Actions</th>
                 </tr>
             </thead>
@@ -24,7 +23,6 @@
                         <td><?= $lates['motif_retard'] ?></td>
                         <td><?= date('d-m-Y', strtotime($lates['date_retard'])) ?></td>
                         <td><?= date('H:i', strtotime($lates['duree_prevue'])) ?></td>
-                        <td><?= $lates['justificatif_retard'] ?></td>
                         <td>
                             <button class="button" title="Justifié">Justifié</button>
                         </td>
@@ -35,7 +33,7 @@
                 <?php endforeach; ?>
                 <?php if (empty($late)) : ?>
                     <tr>
-                        <td colspan="8" class="text-user">Aucun retard présent dans la base de données</td>
+                        <td colspan="7" class="text-user">Aucun retard présent dans la base de données</td>
                     </tr>
                 <?php endif; ?>
             </tbody>
