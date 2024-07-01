@@ -1,6 +1,6 @@
 <div class="container">
     <h1>S'inscrire</h1>
-    <form action="" method="POST">
+    <form action="" method="POST" id="form-register">
         <div class="identite">
             <div>
                 <label for="firstname">Prénom</label>
@@ -61,23 +61,26 @@
                 <div class="ajout-error"><?= htmlspecialchars($errors['email_register']) ?></div>
             <?php endif; ?>
         </div>
+        <div class="password-container">
         <div class="password">
-        <div>
-            <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password">
-            <span>Votre mot de passe doit contenir entre 8 et 16 caractères, une minusucule, une majuscule un chiffre et un caractèrel spécial tel que (!,$,€,*).</span>
+            <div>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="password">
+                <span>Votre mot de passe doit contenir entre 8 et 16 caractères, une minusucule, une majuscule un chiffre et un caractèrel spécial tel que (!,$,€,*).</span>
                 <?php if (isset($errors) && !empty($errors['password'])) : ?>
                     <div class="ajout-error"><?= htmlspecialchars($errors['password']) ?></div>
                 <?php endif; ?>
-        </div>
-        <div>
-            <label for="password">Confirmer votre mot de passe</label>
-            <input type="password" name="password" id="password">
+            </div>
+            <div>
+                <label for="password">Confirmer votre mot de passe</label>
+                <input type="password" name="password" id="password2">
                 <?php if (isset($errors) && !empty($errors['password'])) : ?>
                     <div class="ajout-error"><?= htmlspecialchars($errors['password']) ?></div>
                 <?php endif; ?>
+            </div>
         </div>
         </div>
+        <div class="ajout-error" id="alerte2"></div>
         <div class="role-utilisateur">
             <label for="role_id">Role de l'utilisateur</label>
             <?php foreach ($roles as $role) : ?>
@@ -92,7 +95,7 @@
             <?php endif; ?>
         </div>
         <div>
-            <button type="submit" class="button register-button" title="S'inscrire" name="form_inscribe_submit">S'inscrire</button>
+            <button type="submit" class="button register-button" title="S'inscrire" name="form_inscribe_submit" id="form_inscribe_submit">S'inscrire</button>
         </div>
     </form>
 </div>

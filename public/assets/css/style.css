@@ -278,10 +278,17 @@
         padding-top: 30px;
     }
 
+    .password-container {
+        display: flex;
+        justify-content: center; /* Centre les éléments horizontalement */
+        margin-left: 10px;
+    }
+
     .password{
         display: flex;
         flex-direction: column;
-        margin-top: 10px;
+        align-items: center;
+        gap: 10px;
     }
 
     .register-button {
