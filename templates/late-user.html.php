@@ -5,8 +5,8 @@
         <div>
             <form action="" method="POST" enctype="multipart/form-data" class="form-absence">
                 <div>
-                    <label for="user_file">Parcourir</label>
-                    <input type="file" name="user_file" id="user_file">
+                    <label for="justificatif_retard">Parcourir</label>
+                    <input type="file" name="justificatif_retard" id="justificatif_retard">
                 </div>
                 <div>
                     <label for="late-text">Motif du retard</label>
