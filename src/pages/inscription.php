@@ -27,6 +27,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
         $errors['password'] = "Le champ Mot de passe est obligatoire";
     }
 
+    if (empty($_POST['password2'])) 
+    {
+        $errors['password2'] = "Le champ Confirmer votre mot de passe est obligatoire";
+    }
+
+    if ($_POST['password'] !== $_POST['password2']) 
+    {
+        $errors['password_mismatch'] = "Les mots de passe ne correspondent pas";
+    }
+
     if (empty($_POST['phone_number']) || !ctype_digit($_POST['phone_number'])) 
     {
         $errors['phone_number'] = "Le numéro de téléphone n'est pas valide";
@@ -67,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
 
         if ($utilisateurId) 
         {
-            $errors['email'] = "Un compte existe déjà pour cette adresse mail";
+            $errors['email_register'] = "Un compte existe déjà pour cette adresse mail";
         } 
         else 
         {
@@ -81,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
             $newMdp = password_hash($mdpHache, PASSWORD_DEFAULT);
 
             $query = $dbh->prepare("INSERT INTO utilisateur(nom, prenom, email, password, telephone, numero, rue, code_postal, ville, Id_role) VALUES(:nom, :prenom, :email, :password, :telephone, :numero, :rue, :code_postal, :ville, :Id_role)");
-            $query->execute([
+            $result = $query->execute([
                 'nom' => htmlspecialchars($_POST['lastname']),
                 'prenom' => htmlspecialchars($_POST['firstname']),
                 'email' => htmlspecialchars($email),
@@ -94,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
                 'Id_role' => htmlspecialchars($_POST['role_id'])
             ]);
 
-            if ($dbh->lastInsertId()) 
+            if ($result) 
             {
                 header('Location: /?page=connexion');
                 exit;
