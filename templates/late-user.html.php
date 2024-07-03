@@ -13,6 +13,10 @@
                     <input type="text" name="late-text" id="late-text" placeholder="Ex. Maladie">
                 </div>
                 <div>
+                    <label for="duree_retard">Durée du retard</label>
+                    <input type="text" name="duree_retard" id="duree_retard" placeholder="Ex. 15 minutes">
+                </div>
+                <div>
                     <label for="date_retard">Date du retard</label>
                     <input type="date" name="date_retard" id="date_retard">
                 </div>
