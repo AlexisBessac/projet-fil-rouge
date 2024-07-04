@@ -75,7 +75,7 @@ if (isset($_POST['submit_form_late']))
         require '../src/data/db-connect.php';
         session_start();
         $id_utilisateur = $_SESSION['id'];
-        $query = $dbh->prepare("INSERT INTO retard (date_retard, motif_retard, justificatif_retard, duree_prevue,id_utilisateur) VALUES (:date_retard, :motif_retard, :justificatif_retard, :duree_prevue, id_utilisateur)");
+        $query = $dbh->prepare("INSERT INTO retard (date_retard, motif_retard, justificatif_retard, duree_prevue,id_utilisateur) VALUES (:date_retard, :motif_retard, :justificatif_retard, :duree_prevue, :id_utilisateur)");
         $result = $query->execute([
             'date_retard' => $_POST['date_retard'],
             'motif_retard' => $_POST['late-text'],
@@ -86,7 +86,7 @@ if (isset($_POST['submit_form_late']))
 
         if ($result) 
             {
-                header('Location: /?page=late_user');
+                header('Location: /?page=late-user');
                 exit;
             } 
             else 
