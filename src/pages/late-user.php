@@ -2,6 +2,7 @@
 $title = "Déclare mes retards";
 $description = "L'utilisateur voit ici ses retards et peut les déclarer";
 
+
 // On vérifie si le formulaire est envoyé
 if (isset($_POST['submit_form_late'])) 
 {
@@ -72,8 +73,25 @@ if (isset($_POST['submit_form_late']))
     if (empty($errors)) 
     {
         require '../src/data/db-connect.php';
+        session_start();
+        $id_utilisateur = $_SESSION['id'];
+        $query = $dbh->prepare("INSERT INTO retard (date_retard, motif_retard, justificatif_retard, duree_prevue,id_utilisateur) VALUES (:date_retard, :motif_retard, :justificatif_retard, :duree_prevue, id_utilisateur)");
+        $result = $query->execute([
+            'date_retard' => $_POST['date_retard'],
+            'motif_retard' => $_POST['late-text'],
+            'justificatif_retard' => $filename,
+            'duree_prevue' => $_POST['duree_retard'],
+            'id_utilisateur' => $id_utilisateur
+        ]);
 
-        $query = $dbh->prepare("INSERT INTO retard (date_retard, motif_retard, justificatif_retard, duree_prevue) VALUES (:date_retard, :motif_retard, :justificatif_retard, :duree_prevue)");
-
+        if ($result) 
+            {
+                header('Location: /?page=late_user');
+                exit;
+            } 
+            else 
+            {
+                $errors['form'] = "Une erreur s'est produite lors de l'inscription. Veuillez contacter l'administrateur à l'adresse [email].";
+            }
     }
 }
