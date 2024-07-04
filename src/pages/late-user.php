@@ -14,9 +14,14 @@ if (isset($_POST['submit_form_late']))
         $errors['late-text'] = "Le champ Motif du retard est obligatoire et doit contenir plus d'un caractère.";
     }
 
-    if (empty($_POST['duree_retard']) || strlen($_POST['duree_retard']) <= 1) 
+    if (empty($_POST['duree_retard'])) 
     {
-        $errors['duree_retard'] = "Le champ Durée du retard est obligatoire et doit contenir plus d'un caractère.";
+        $errors['duree_retard'] = "Le champ Durée du retard est obligatoire.";
+    } 
+    else 
+    {
+        // Conversion de la durée au format HH:MM:SS
+        $duree_retard = date("H:i:s", strtotime($_POST['duree_retard']));
     }
 
     if (empty($_POST['date_retard']) || ctype_digit($_POST['date_retard'])) 
@@ -80,7 +85,7 @@ if (isset($_POST['submit_form_late']))
             'date_retard' => $_POST['date_retard'],
             'motif_retard' => $_POST['late-text'],
             'justificatif_retard' => $filename,
-            'duree_prevue' => $_POST['duree_retard'],
+            'duree_prevue' => $duree_retard,
             'id_utilisateur' => $id_utilisateur
         ]);
 
