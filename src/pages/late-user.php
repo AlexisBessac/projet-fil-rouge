@@ -91,7 +91,7 @@ if (isset($_POST['submit_form_late']))
 
         if ($result) 
             {
-                header('Location: /?page=late-user');
+                header('Location: /?page=dashboard');
                 exit;
             } 
             else 
