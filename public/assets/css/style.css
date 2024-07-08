@@ -322,6 +322,17 @@
         }
     }
 
+    @media (min-width: 768px) {
+        .identite, .adresse-form, .password-container {
+            display: flex;
+            justify-content: space-between; /* Espace entre les éléments */
+        }
+    
+        .identite > div, .adresse-form > div, .password-container > div {
+            width: 48%; /* Deux colonnes de 48% de largeur */
+        }
+    }
+
         /* Style du formulaire de la page Se Connecter */
     .form-login {
         display: flex;
@@ -613,3 +624,48 @@
             padding: 10px; /* Réduction du padding pour les petits écrans */
         }
     }
+
+        /* Media Query du tableau de bor du responsable administratif */
+
+        @media (max-width: 768px) {
+            .button-container {
+                text-align: center;
+            }
+        
+            .table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        
+            .table thead {
+                display: none;
+            }
+        
+            .table tr {
+                display: block;
+                margin-bottom: 10px;
+                border: 1px solid #ddd;
+                padding: 10px;
+            }
+        
+            .table td {
+                display: block;
+                text-align: right;
+                border: none;
+                padding: 5px 10px;
+                position: relative;
+            }
+        
+            .table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        
+            .table td:last-child {
+                border-bottom: 1px solid #ddd;
+            }
+        }
