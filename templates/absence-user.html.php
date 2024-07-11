@@ -5,8 +5,8 @@
         <div>
             <form action="" method="POST" enctype="multipart/form-data" class="form-absence">
                 <div>
-                    <label for="user_file">Parcourir</label>
-                    <input type="file" name="user_file" id="user_file">
+                    <label for="justificatif_absence">Parcourir</label>
+                    <input type="file" name="justificatif_absence" id="justificatif_absence">
                 </div>
                 <div>
                     <label for="absence-text">Motif de l'absence</label>
@@ -16,9 +16,13 @@
                     <label for="date_debut_absence">Date du début de l'absence</label>
                     <input type="date" name="date_debut_absence" id="date_debut_absence">
                 </div>
+                <div>
+                    <label for="date_debut_absence">Date de la fin de l'absence</label>
+                    <input type="date" name="date_fin_absence" id="date_fin_absence">
+                </div>
                 <div class="dropzone">Où faites glisser vos documents ici</div>
                 <div>
-                    <button class="button reguster-buttonr" name="submit_form_upload" type="submit" title="Trasmettre mon absnce">Transmettre mon absence</button>
+                    <button class="button reguster-buttonr" name="submit_form_absence" type="submit" title="Trasmettre mon absnce">Transmettre mon absence</button>
                 </div>
             </form>
         </div>
