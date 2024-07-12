@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     function verifierMotsDePasse(password, password2) {
-        if (password.length !== password2.length || password.length < 8 || password.length > 16) {
+        if (password.length !== password2.length || password.length < 16 || password.length > 32) {
             return "Les deux mots de passe n'ont pas la même longueur ou la longueur n'est pas entre 8 et 16 caractères";
         }
         return "";
@@ -36,7 +36,5 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         });
-    } else {
-        console.error("L'élément #form_inscribe_submit n'existe pas dans le DOM.");
     }
 });
