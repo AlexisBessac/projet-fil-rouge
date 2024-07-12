@@ -66,7 +66,7 @@
             <div>
                 <label for="password">Mot de passe</label>
                 <input type="password" name="password" id="password">
-                <span>Votre mot de passe doit contenir entre 8 et 16 caractères, une minusucule, une majuscule un chiffre et un caractèrel spécial tel que (!,$,€,*).</span>
+                <span>Votre mot de passe doit contenir entre 16 et 32 caractères, une minusucule, une majuscule un chiffre et un caractèrel spécial tel que (!,$,€,*).</span>
                 <?php if (isset($errors) && !empty($errors['password'])) : ?>
                     <div class="ajout-error"><?= htmlspecialchars($errors['password']) ?></div>
                 <?php endif; ?>

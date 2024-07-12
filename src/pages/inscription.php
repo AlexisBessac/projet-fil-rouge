@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
     if (empty($errors)) 
     {
         require '../src/data/db-connect.php';
-        $email = $_POST['email_register'];
+        $email = htmlspecialchars($_POST['email_register']);
         $query = $dbh->prepare("SELECT id_utilisateur FROM utilisateur WHERE email = :email");
         $query->execute(['email' => $email]);
         $utilisateurId = $query->fetch();
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit']
             $result = $query->execute([
                 'nom' => htmlspecialchars($_POST['lastname']),
                 'prenom' => htmlspecialchars($_POST['firstname']),
-                'email' => htmlspecialchars($email),
+                'email' => $email,
                 'password' => $newMdp,
                 'telephone' => htmlspecialchars($_POST['phone_number']),
                 'numero' => htmlspecialchars($_POST['street_number']),
