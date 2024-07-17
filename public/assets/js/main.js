@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     function verifierMotsDePasse(password, password2) {
         if (password.length !== password2.length || password.length < 16 || password.length > 32) {
-            return "Les deux mots de passe n'ont pas la même longueur ou la longueur n'est pas entre 8 et 16 caractères";
+            return "Les deux mots de passe n'ont pas la même longueur ou la longueur n'est pas entre 16 et 32 caractères";
         }
         return "";
     }
