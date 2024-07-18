@@ -1,5 +1,4 @@
-
-<div class="container">
+<section class="container">
     <h1>Modifier un utilisateur</h1>
     <a href="/?page=users"><button class="button cancel-button" title="Annuler">Annuler</button></a>
     <form action="" method="POST">
@@ -80,4 +79,4 @@
             <button type="submit" class="button register-button" title="Modifier un utilisateur" name="edit_user_submit">Modifier</button>
         </div>
     </form>
-</div>
+</section>

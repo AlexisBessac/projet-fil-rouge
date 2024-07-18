@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
     <div class="button-container">
         <div>
             <a href="/?page=inscription">
@@ -15,4 +15,4 @@
     <div class="punchline">
         <p>À tous les coups, Formul'Air : votre souffle de facilité pour suivre vos dossiers d'inscription avec légèreté et rapidité</p>
     </div>
-</div>
+</section>

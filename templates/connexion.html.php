@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
     <h1>Se Connecter</h1>
     <form action="" method="POST" class="form-login">
         <div>
@@ -24,4 +24,4 @@
             <button type="button" class="button login_button" title="Mot de passe oublié">Mot de passe oublié</button>
         </div>
     </form>
-</div>
+</section>

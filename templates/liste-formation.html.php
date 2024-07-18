@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
     <h1>Formations</h1>
     <a href="/?page=dashboard"><button class="button" title="Revenir sur mon tableau de bord">Revenir sur mon tableau de bord</button></a>
     <div class="card-container">
@@ -21,4 +21,4 @@
             </div>
         <?php endforeach; ?>
     </div>
-</div>
+</section>

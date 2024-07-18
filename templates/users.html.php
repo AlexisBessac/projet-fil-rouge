@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
     <h1>Liste des utilisateurs</h1>
     <div>
         <a href="/?page=add-user"><button class="button" title="Créer un utilisateur">Créer un utilisateur</button></a>
@@ -53,4 +53,4 @@
             <?php endif; ?>
         </tbody>
     </table>
-</div>
+</section>

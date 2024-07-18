@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
     <h1>S'inscrire</h1>
     <form action="" method="POST" id="form-register">
         <div class="identite">
@@ -98,4 +98,4 @@
             <button type="submit" class="button register-button" title="S'inscrire" name="form_inscribe_submit" id="form_inscribe_submit">S'inscrire</button>
         </div>
     </form>
-</div>
+</section>

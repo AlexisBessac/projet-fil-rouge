@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
     <h1>Mon  tableau de bord</h1>
     <div class="button-container">
         <a href="/?page=connexion"><button class="button" title="Se déconnecter">Se Déconnecter</button></a>
@@ -19,4 +19,4 @@
             <p>Adresse : <span class="user-detail"><?= $user['numero']; ?> <?= $user['rue']; ?> <?= $user['code_postal']; ?> <?= $user['ville']; ?></span></p>
         </div>
     </section>
-</div>
+</section>

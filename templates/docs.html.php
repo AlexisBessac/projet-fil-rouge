@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
     <h1>Liste des documents à fournir dans le cadre d'une formation</h1>
     <div>
         <a href="/?page=add-doc"><button class="button" title="Ajouter un document">Ajouter un document</button></a>
@@ -35,4 +35,4 @@
             <?php endif; ?>
         </tbody>
     </table>
-</div>
+</section>

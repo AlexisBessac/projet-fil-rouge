@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
     <h1>Modifier une formation</h1>
     <a href="/?page=lessons"><button class="button cancel-button" title="Annuler">Annuler</button></a>
     <form action="" method="POST">
@@ -45,4 +45,4 @@
             <button type="submit" class="button register-button" name="edit_lesson_submit" title="Modifier">Modifier</button>
         </div>
     </form>
-</div>
+</section>

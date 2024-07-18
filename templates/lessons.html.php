@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
     <h1>Liste des formations</h1>
     <div>
         <a href="/?page=add-lesson"><button class="button" title="Créer une formation ">Créer une formation</button></a>
@@ -46,4 +46,4 @@
             <?php endif; ?>
         </tbody>
     </table>
-</div>
+</section>
