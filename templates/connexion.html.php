@@ -3,7 +3,7 @@
     <form action="" method="POST" class="form-login">
         <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Ex. john.doe@domaine.com">
+            <input type="email" name="email" id="email" placeholder="Ex. john.doe@domaine.com" required>
             <?php if (isset($errors) && !empty($errors['email'])) : ?>
                 <div class="ajout-error">
                     <?= htmlspecialchars($errors['email']) ?>
@@ -12,7 +12,7 @@
         </div>
         <div>
             <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" required>
             <?php if (isset($errors) && !empty($errors['password'])) : ?>
                 <div class="ajout-error">
                     <?= htmlspecialchars($errors['password']) ?>

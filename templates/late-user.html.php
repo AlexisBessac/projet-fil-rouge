@@ -6,19 +6,19 @@
             <form action="" method="POST" enctype="multipart/form-data" class="form-absence">
                 <div>
                     <label for="justificatif_retard">Parcourir</label>
-                    <input type="file" name="justificatif_retard" id="justificatif_retard">
+                    <input type="file" name="justificatif_retard" id="justificatif_retard" required>
                 </div>
                 <div>
                     <label for="late-text">Motif du retard</label>
-                    <input type="text" name="late-text" id="late-text" placeholder="Ex. Maladie">
+                    <input type="text" name="late-text" id="late-text" placeholder="Ex. Maladie" required>
                 </div>
                 <div>
                     <label for="duree_retard">Durée du retard</label>
-                    <input type="time" name="duree_retard" id="duree_retard" placeholder="Ex. 15 minutes">
+                    <input type="time" name="duree_retard" id="duree_retard" placeholder="Ex. 15 minutes" required>
                 </div>
                 <div>
                     <label for="date_retard">Date du retard</label>
-                    <input type="date" name="date_retard" id="date_retard">
+                    <input type="date" name="date_retard" id="date_retard" required>
                 </div>
                 <div class="dropzone">Où faites glisser vos documents ici</div>
                 <div>
