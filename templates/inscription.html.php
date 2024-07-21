@@ -41,7 +41,7 @@
             </div>
             <div>
                 <label for="zip_code">Code Postal</label>
-                <input type="number" name="zip_code" id="zip_code" placeholder="Ex. 57000" required>
+                <input type="text" name="zip_code" id="zip_code" placeholder="Ex. 57000" required>
                 <?php if (isset($errors) && !empty($errors['zip_code'])) : ?>
                     <div class="ajout-error"><?= htmlspecialchars($errors['zip_code']) ?></div>
                 <?php endif; ?>
