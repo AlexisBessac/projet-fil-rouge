@@ -13,12 +13,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/image/logo.svg">
 </head>
 
 <body>
     <header class="header"> 
         <div class="logo">
-            <img src="" alt="Logo de Formul'Air">
+            <img src="../assets/image/logo.svg" alt="Logo de Formul'Air">
         </div>
     </header>
     <main>
@@ -28,7 +29,7 @@
     <footer class="footer">
         <div class="grid">
             <div>
-                <img src="" alt="logo de Formul'Air">
+                <img src="../assets/image/logo.svg" alt="logo de Formul'Air">
             </div>
             <div class="legals">
                 <p>Page de confidentialité</p>
