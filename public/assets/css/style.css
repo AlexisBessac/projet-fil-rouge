@@ -90,7 +90,7 @@
     }
 
     /* Responsive de la page d'accueil */
-    @media (max-width: 768px) {
+    @media (max-width: 576px) {
         .login {
             width: 100%;
             font-size: 18px;
@@ -110,7 +110,7 @@
         color: #181C8B;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 576px) {
         .error h1 {
             font-size: 2em;
         }
@@ -303,7 +303,7 @@
     }
 
         /* Responsive de la page d'inscription */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         .identite div,
         .coordonne div,
         .adresse-form div,
@@ -357,7 +357,7 @@
     }
 
         /* Responsive de la page Se Connecter */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         .container {
             max-width: 100%; /* Pleine largeur sur les petits écrans */
         }
@@ -437,7 +437,7 @@
     }
 
         /* Responsive du dashboard de l'utilisateur */
-    @media (max-width: 768px) {
+    @media (max-width: 576px) {
         .container {
             padding: 10px;
         }
@@ -519,7 +519,7 @@
     }
 
         /* Responsive de la page des formations que peut voir l'utilisateur */
-    @media (max-width: 768px) {
+    @media (max-width: 576px) {
         .card {
             width: 50%;
         }
@@ -566,7 +566,7 @@
 
         /* Responsive pour la page des documents à fournir0
                      pour la formation */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 576px) {
         .card {
             max-width: 100%;
             margin: 20px auto;
@@ -595,7 +595,7 @@
     }
 
     /* Responsive de la page absence pour les utilisateurs */
-    @media (max-width: 768px) {
+    @media (max-width: 576px) {
         .form-absence {
             display: flex;
             flex-direction: column;
@@ -625,9 +625,9 @@
         }
     }
 
-        /* Media Query du tableau de bor du responsable administratif */
+        /* Media Query du tableau de bord du responsable administratif */
 
-        @media (max-width: 768px) {
+        @media (max-width: 576px) {
             .button-container {
                 text-align: center;
             }
