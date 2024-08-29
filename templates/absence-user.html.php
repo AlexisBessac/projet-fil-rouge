@@ -11,14 +11,29 @@
                 <div>
                     <label for="absence-text">Motif de l'absence</label>
                     <input type="text" name="absence-text" id="absence-text" placeholder="Maladie" required>
+                    <?php if (isset($errors) && !empty($errors['absence-text'])) : ?>
+                        <div class="ajout-error">
+                            <?= htmlspecialchars($errors['absence-text']) ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div>
                     <label for="date_debut_absence">Date du début de l'absence</label>
                     <input type="date" name="date_debut_absence" id="date_debut_absence" required>
+                    <?php if (isset($errors) && !empty($errors['date_debut_absence'])) : ?>
+                        <div class="ajout-error">
+                            <?= htmlspecialchars($errors['date_debut_absence']) ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div>
-                    <label for="date_debut_absence">Date de la fin de l'absence</label>
+                    <label for="date_fin_absence">Date de la fin de l'absence</label>
                     <input type="date" name="date_fin_absence" id="date_fin_absence" required>
+                    <?php if (isset($errors) && !empty($errors['date_fin_absence'])) : ?>
+                        <div class="ajout-error">
+                            <?= htmlspecialchars($errors['date_fin_absence']) ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="dropzone">Où faites glisser vos documents ici</div>
                 <div>
