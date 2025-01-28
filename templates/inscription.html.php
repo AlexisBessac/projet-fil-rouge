@@ -62,37 +62,16 @@
             <?php endif; ?>
         </div>
         <div class="password-container">
-        <div class="password">
-            <div>
-                <label for="password">Mot de passe</label>
-                <input type="password" name="password" id="password" required>
-                <span>Votre mot de passe doit contenir entre 16 et 32 caractères, une minusucule, une majuscule un chiffre et un caractère spécial tel que (!,$,€,*).</span>
-                <?php if (isset($errors) && !empty($errors['password'])) : ?>
-                    <div class="ajout-error"><?= htmlspecialchars($errors['password']) ?></div>
-                <?php endif; ?>
-            </div>
-            <div>
-                <label for="password">Confirmer votre mot de passe</label>
-                <input type="password" name="password2" id="password2" required>
-                <?php if (isset($errors) && !empty($errors['password'])) : ?>
-                    <div class="ajout-error"><?= htmlspecialchars($errors['password']) ?></div>
-                <?php endif; ?>
-            </div>
-        </div>
-        </div>
-        <div class="ajout-error" id="alerte2"></div>
-        <div class="role-utilisateur">
-            <label for="role_id">Role de l'utilisateur</label>
-            <?php foreach ($roles as $role) : ?>
-                <?php $is_admin = trim(strtolower($role['nom_role'])) === 'administrateur'; ?>
-                <div class="<?= $is_admin ? 'hidden' : '' ?>">
-                    <label for="role_id_<?= htmlspecialchars($role['Id_role']) ?>"><?= htmlspecialchars($role['nom_role']) ?></label>
-                    <input type="radio" name="role_id" id="role_id_<?= htmlspecialchars($role['Id_role']) ?>" value="<?= htmlspecialchars($role['Id_role']) ?>">
+            <div class="password">
+                <div>
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" id="password" required>
+                    <span>Votre mot de passe doit contenir entre 16 et 32 caractères, une minusucule, une majuscule un chiffre et un caractère spécial tel que (!,$,€,*).</span>
+                    <?php if (isset($errors) && !empty($errors['password'])) : ?>
+                        <div class="ajout-error"><?= htmlspecialchars($errors['password']) ?></div>
+                    <?php endif; ?>
                 </div>
-            <?php endforeach; ?>
-            <?php if (isset($errors) && !empty($errors['role_id'])) : ?>
-                <div class="ajout-error"><?= htmlspecialchars($errors['role_id']) ?></div>
-            <?php endif; ?>
+            </div>
         </div>
         <div>
             <button type="submit" class="button register-button" title="S'inscrire" name="form_inscribe_submit" id="form_inscribe_submit">S'inscrire</button>
