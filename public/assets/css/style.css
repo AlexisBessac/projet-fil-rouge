@@ -113,12 +113,6 @@ th {
     padding-bottom: 10px;
 }
 
-.delete__button {
-    background-color: #ff0000;
-    color: #fefefe;
-    cursor: pointer;
-}
-
 .ajout-button {
     display: flex;
     align-items: center;
@@ -141,29 +135,7 @@ th {
     cursor: pointer;
 }
 
-/* Texte s'il n'y à aucune information trouvé dans le tableau utilisateur ou formation */
-.text-user {
-    background-color: #fefefe;
-    color: #181C8B;
-    text-align: center;
-}
-
-/* Style du CRUD des formations */
-.formation {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 20px;
-}
-
 /* Style du formulaire de la page Se Connecter */
-.form-login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .container_button {
     display: flex;
     justify-content: space-between;
