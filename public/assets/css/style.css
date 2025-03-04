@@ -1,671 +1,491 @@
-        /*Style Généraux du site*/
-    * {
-        box-sizing: border-box;
-    }
+/*Style Généraux du site*/
+* {
+    box-sizing: border-box;
+}
 
-    .container {
-        max-width: 1440px;
-        margin: 0 auto;
-    }
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
-    h1 {
-        color: #181C8B;
-        text-align: center;
-        font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-        margin-top: 20px;
-    }
+h1 {
+    color: #181C8B;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 20px;
+}
 
-    a {
-        text-decoration: none;
-    }
+a {
+    text-decoration: none;
+}
 
-    body {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+}
 
-    .button {
-        color: #fefefe;
-        background-color: #181C8B;
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
+.button {
+    color: #fefefe;
+    background-color: #181C8B;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
 
-    .header {
-        background-color: #181C8B;
-    }
+.header {
+    background-color: #181C8B;
+}
 
+footer {
+    background-color: #181C8B;
+    color: #fefefe;
+    margin-top: 10px;
+}
 
-        /* Style du footer */
-    .footer {
-        background-color: #181C8B;
-        color: #fefefe;
-        margin-top: 10px;
-    }
+/* Style de la page d'accueil */
+.button-container {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    gap: 10px;
+}
 
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        gap: 20px;
-        align-items: center;
-    }
+.login {
+    color: #fefefe;
+    background-color: #181C8B;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
-    .legals {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .copyrights {
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-    }
-
-
-        /* Style de la page d'accueil */
-    .button-container {
-        display: flex;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        gap: 10px;
-    }
-
+/* Responsive de la page d'accueil */
+@media (max-width: 576px) {
     .login {
-        color: #fefefe;
-        background-color: #181C8B;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-
-    .punchline {
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    /* Responsive de la page d'accueil */
-    @media (max-width: 576px) {
-        .login {
-            width: 100%;
-            font-size: 18px;
-        }
-    
-        .punchline p {
-            font-size: 16px;
-        }
-    }
-
-        /* Style de la page 404 */
-    .error {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #181C8B;
-    }
-
-    @media (max-width: 576px) {
-        .error h1 {
-            font-size: 2em;
-        }
-    
-        .error p {
-            font-size: 1em;
-        }
-    
-        .error a {
-            padding: 8px 16px;
-        }
-    }
-    
-
-
-        /*Style du CRUD*/
-    .lesson {
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-        margin-bottom: 10px;
-        background-color: #181C8B;
-        color: #fefefe;
-        cursor: pointer;
-    }
-
-    table {
         width: 100%;
-        border-collapse: collapse;
+        font-size: 18px;
     }
 
-    tr:nth-child(even) td {
-        background-color: #181C8B;
-        color: #fefefe;
+    .punchline p {
+        font-size: 16px;
     }
+}
 
-    tr:nth-child(odd) td {
-        background-color: #fefefe;
-        color: #181C8B;
-    }
+/*Style du CRUD*/
+.lesson {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-bottom: 10px;
+    background-color: #181C8B;
+    color: #fefefe;
+    cursor: pointer;
+}
 
-    td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #181C8B;
-    }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-    th {
-        background-color: #181C8B;
-        color: #fefefe;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+tr:nth-child(even) td {
+    background-color: #181C8B;
+    color: #fefefe;
+}
 
-    .delete__button {
-        background-color: #ff0000;
-        color: #fefefe;
-        cursor: pointer;
-    }
+tr:nth-child(odd) td {
+    background-color: #fefefe;
+    color: #181C8B;
+}
 
-    .ajout-button {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        cursor: pointer;
-    }
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #181C8B;
+}
 
-    .cancel-button {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        cursor: pointer;
-    }
+th {
+    background-color: #181C8B;
+    color: #fefefe;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
-    .edit_user_button {
-        display: block;
-        background-color: #181C8B;
-        color: #fefefe;
-        width: 90%;
-        margin-bottom: 10px;
-        cursor: pointer;
-    }
+.delete__button {
+    background-color: #ff0000;
+    color: #fefefe;
+    cursor: pointer;
+}
 
+.ajout-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
 
-        /* Texte s'il n'y à aucune information trouvé dans le tableau utilisateur ou formation */
-    .text-user {
-        background-color: #fefefe;
-        color: #181C8B;
-        text-align: center;
-    }
+.cancel-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
 
-        /* Style du CRUD des formations */
-    .formation {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-right: 20px;
-    }
+.edit_user_button {
+    display: block;
+    background-color: #181C8B;
+    color: #fefefe;
+    width: 90%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
 
+/* Texte s'il n'y à aucune information trouvé dans le tableau utilisateur ou formation */
+.text-user {
+    background-color: #fefefe;
+    color: #181C8B;
+    text-align: center;
+}
 
-        /* Style Généraux des formulaires */
-    form {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+/* Style du CRUD des formations */
+.formation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+}
 
-    form div {
-        flex: 0 0 50%;
-        /* Répartit les éléments sur deux colonnes */
-        padding: 0 10px;
-        /* Espacement entre les colonnes */
-    }
+/* Style du formulaire de la page Se Connecter */
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    form div label {
-        display: block;
-        /* Affiche les labels sur une ligne */
-        font-weight: bold;
-    }
+.container_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    form div input {
-        width: 100%;
-        /* Ajuste la largeur des champs de saisie */
-        margin-bottom: 20px;
-        /* Espacement entre les champs */
-    }
+.login_button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+    margin: 10px 10px;
+    cursor: pointer;
+}
 
-    .ajout-error {
-        display: block;
-        color: #ff0000;
-    }
-
-    .hidden {
-        display: none;
-    }
-
-
-        /* Style du formulaire de la page s'Inscrire */
-    .identite {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .adresse-form {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .coordonne {
-        display: inline;
-        margin-right: 20px;
-        margin-left: 30px;
-    }
-
-    .role-utilisateur {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        margin-right: 20px;
-        margin-left: 50px;
-        padding-top: 30px;
-    }
-
-    .password-container {
-        display: flex;
-        justify-content: center; /* Centre les éléments horizontalement */
-        margin-left: 10px;
-    }
-
-    .password{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .register-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-        color: #fefefe;
-        background-color: #181C8B;
-        width: 100%;
-        cursor: pointer;
-    }
-
-        /* Responsive de la page d'inscription */
-    @media screen and (max-width: 576px) {
-        .identite div,
-        .coordonne div,
-        .adresse-form div,
-        .role-utilisateur div
-        .password div {
-            flex-direction: column;
-            align-items: stretch;
-        }
-    
-        .identite div input,
-        .coordonne div input,
-        .adresse-form div input,
-        .role-utilisateur div input,
-        span {
-            width: 100%;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .identite, .adresse-form, .password-container {
-            display: flex;
-            justify-content: space-between; /* Espace entre les éléments */
-        }
-    
-        .identite > div, .adresse-form > div, .password-container > div {
-            width: 48%; /* Deux colonnes de 48% de largeur */
-        }
-    }
-
-        /* Style du formulaire de la page Se Connecter */
-    .form-login {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+/* Responsive de la page Se Connecter */
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 100%;
     }
 
     .container_button {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: stretch;
     }
 
-    .login_button {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        white-space: nowrap;
-        margin: 10px 10px;
-        cursor: pointer;
+    .container_button input,
+    .container_button button {
+        margin-bottom: 10px;
+    }
+}
+
+/* Style du dashboard de l'utilisateur */
+.navbar {
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar ul li a .button {
+    text-decoration: none;
+}
+
+.user-info-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    text-align: left;
+}
+
+.user-info-container h2 {
+    font-size: 24px;
+    color: #181C8B;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.user-info-container p {
+    font-size: 18px;
+    color: #181C8B;
+    margin: 10px 0;
+    white-space: nowrap;
+}
+
+.user-detail {
+    font-weight: bold;
+    color: #181C8B;
+}
+
+/* Responsive du dashboard de l'utilisateur */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
     }
 
-        /* Responsive de la page Se Connecter */
-    @media screen and (max-width: 576px) {
-        .container {
-            max-width: 100%; /* Pleine largeur sur les petits écrans */
-        }
-    
-        .container_button {
-            flex-direction: column; /* Affichage des boutons en colonne */
-            align-items: stretch; /* Extension des boutons pour remplir l'espace */
-        }
-    
-        .container_button input,
-        .container_button button {
-            margin-bottom: 10px; /* Espacement entre les boutons */
-        }
+    h1 {
+        font-size: 20px;
     }
 
+    .user-info-container h2 {
+        font-size: 20px;
+    }
 
-        /* Style du dashboard de l'utilisateur */
-    .navbar {
-        text-align: center;
+    .user-info-container p {
+        font-size: 16px;
     }
 
     .navbar ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: inline-block;
+        flex-direction: column;
     }
 
-    .navbar ul li {
-        display: inline;
-        margin-right: 10px;
+    .navbar .button {
+        max-width: 100%;
     }
+}
 
-    .navbar ul li:last-child {
-        margin-right: 0;
-    }
+/* Style des cards de formation pour lesquelles 
+        l'utilisateur peut postuler  */
 
-    .navbar ul li a .button {
-        text-decoration: none;
-    }
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
 
-    .user-info-section {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .user-info-container {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        max-width: 500px;
-        width: 100%;
-        text-align: left;
-    }
-    
-    .user-info-container h2 {
-        font-size: 24px;
-        color: #181C8B;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 10px;
-    }
-    
-    .user-info-container p {
-        font-size: 18px;
-        color: #181C8B;
-        margin: 10px 0;
-        white-space: nowrap; /* Empêche les sauts de ligne */
-    }
-    
-    .user-detail {
-        font-weight: bold;
-        color: #181C8B;
-    }
+.card {
+    width: 25%;
+    background-color: #181C8B;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: row;
+}
 
-        /* Responsive du dashboard de l'utilisateur */
-    @media (max-width: 576px) {
-        .container {
-            padding: 10px;
-        }
-    
-        h1 {
-            font-size: 20px;
-        }
-    
-        .user-info-container h2 {
-            font-size: 20px;
-        }
-    
-        .user-info-container p {
-            font-size: 16px;
-        }
-    
-        .navbar ul {
-            flex-direction: column;
-        }
-    
-        .navbar .button {
-            max-width: 100%;
-        }
-    }
+.card-body {
+    padding: 16px;
+    color: #fefefe;
+}
 
-    
-        /* Style des cards de formation pour lesquelles 
-                l'utilisateur peut postuler  */
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fefefe;
+    display: flex;
+    text-align: center;
+}
 
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        padding: 20px;
-    }
+.card-text {
+    font-size: 14px;
+    color: #fefefe;
+}
 
+.button-card {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #181C8B;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive de la page des formations que peut voir l'utilisateur */
+@media (max-width: 576px) {
     .card {
-        width: 25%;
-        background-color: #181C8B;
-        border-radius: 25px;
-        overflow: hidden;
-        margin: 20px 10px;
-        display: flex;
-        flex-direction: row;
+        width: 50%;
     }
+}
 
-    .card-body {
-        padding: 16px;
-        color: #fefefe;
+/* Style de la page des documents à fournir pour postuler dans une formation */
+.document-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.document-list li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.document-item {
+    background: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.document-item h2 {
+    color: #181C8B;
+}
+
+.document-description {
+    margin-top: 10px;
+}
+
+/* Responsive pour la page des documents à fournir0
+             pour la formation */
+@media screen and (max-width: 576px) {
+    .card {
+        max-width: 100%;
+        margin: 20px auto;
     }
+}
 
-    .card-title {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 8px;
-        color: #fefefe;
-        display: flex;
-        text-align: center;
-    }
+/* Style du formulaire pour déclarer une absence 
+        pour un utilisateur */
+.form-absence {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    .card-text {
-        font-size: 14px;
-        color: #fefefe;
-    }
+.dropzone {
+    margin-top: 20px;
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    border: 2px dashed #cccccc;
+    text-align: center;
+    line-height: 160px;
+    margin-bottom: 10px;
+}
 
-    .btn {
-        display: inline-block;
-        padding: 8px 16px;
-        margin-top: 12px;
-        font-size: 14px;
-        font-weight: bold;
-        text-align: center;
-        background-color: #181C8B;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-        /* Responsive de la page des formations que peut voir l'utilisateur */
-    @media (max-width: 576px) {
-        .card {
-            width: 50%;
-        }
-    }
-
-
-        /* Style de la page des documents à fournir pour postuler dans une formation */
-    .document-list ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .document-list li {
-        background: #ffffff;
-        margin: 10px 0;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .container-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .document-item {
-        background: #ffffff;
-        margin: 20px;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        max-width: 300px;
-        text-align: center;
-    }
-
-    .document-item h2 {
-        color: #181C8B;
-    }
-
-    .document-description {
-        margin-top: 10px;
-    }
-
-        /* Responsive pour la page des documents à fournir0
-                     pour la formation */
-    @media screen and (max-width: 576px) {
-        .card {
-            max-width: 100%;
-            margin: 20px auto;
-        }
-    }
-
-
-        /* Style du formulaire pour déclarer une absence 
-                    pour un utilisateur */
+/* Responsive de la page absence pour les utilisateurs */
+@media (max-width: 576px) {
     .form-absence {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        align-items: stretch;
     }
 
-    .dropzone{
-        margin-top: 20px;
-        padding: 20px;
-        width: 400px;
-        height: 200px;
-        border: 2px dashed #cccccc;
+    .form-absence div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-absence label {
+        margin-bottom: 5px;
+    }
+
+    .form-absence input,
+    .form-absence button {
+        width: 100%;
+    }
+
+    .dropzone {
+        width: 100%;
+        height: 120px;
+        line-height: 80px;
+        padding: 10px;
+    }
+}
+
+/* Media Query du tableau de bord du responsable administratif */
+@media (max-width: 576px) {
+    .button-container {
         text-align: center;
-        line-height: 160px;
+    }
+
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table tr {
+        display: block;
         margin-bottom: 10px;
+        border: 1px solid #ddd;
+        padding: 10px;
     }
 
-    /* Responsive de la page absence pour les utilisateurs */
-    @media (max-width: 576px) {
-        .form-absence {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-        }
-
-        .form-absence div {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-absence label {
-            margin-bottom: 5px;
-        }
-
-        .form-absence input,
-        .form-absence button {
-            width: 100%;
-        }
-
-        .dropzone {
-            width: 100%; /* Utilisation de toute la largeur disponible */
-            height: 120px; /* Réduction de la hauteur sur les très petits écrans */
-            line-height: 80px; /* Ajustement du centrage vertical du texte */
-            padding: 10px; /* Réduction du padding pour les petits écrans */
-        }
+    .table td {
+        display: block;
+        text-align: right;
+        border: none;
+        padding: 5px 10px;
+        position: relative;
     }
 
-        /* Media Query du tableau de bord du responsable administratif */
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
 
-        @media (max-width: 576px) {
-            .button-container {
-                text-align: center;
-            }
-        
-            .table {
-                display: block;
-                overflow-x: auto;
-                white-space: nowrap;
-            }
-        
-            .table thead {
-                display: none;
-            }
-        
-            .table tr {
-                display: block;
-                margin-bottom: 10px;
-                border: 1px solid #ddd;
-                padding: 10px;
-            }
-        
-            .table td {
-                display: block;
-                text-align: right;
-                border: none;
-                padding: 5px 10px;
-                position: relative;
-            }
-        
-            .table td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 10px;
-                font-weight: bold;
-                text-align: left;
-            }
-        
-            .table td:last-child {
-                border-bottom: 1px solid #ddd;
-            }
-        }
+    .table td:last-child {
+        border-bottom: 1px solid #ddd;
+    }
+}

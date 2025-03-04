@@ -16,7 +16,7 @@
                     </p>
                     <p class="card-text"><?= $formation['lieu'] ?></p>
                     <p class="card-text"><?= $formation['ville']?></p>
-                    <a href="/?page=apply" class="btn" title="Postuler à une formation">Postuler à cette formation</a>
+                    <a href="/?page=apply" class="button-card" title="Postuler à une formation">Postuler à cette formation</a>
                 </div>
             </div>
         <?php endforeach; ?>
