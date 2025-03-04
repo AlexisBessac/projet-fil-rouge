@@ -1,10 +1,10 @@
-<section class="container">
-    <h1>Tableau de bord du responsable administratif</h1>
+<section class="container py-5">
+    <h1 class="text-center my-4">Tableau de bord du responsable administratif</h1>
     <div class="button-container">
         <a href="/?page=connexion"><button class="button" title="Se déconnecter">Se Déconnecter</button></a>
     </div>
-    <section>
-        <table class="table">
+    <section class="my-4">
+        <table class="table table-striped table-bordered">
             <thead>
                 <tr>
                     <th>Prénom</th>

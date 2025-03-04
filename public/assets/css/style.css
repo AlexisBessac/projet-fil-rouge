@@ -10,7 +10,6 @@
 
 h1 {
     color: #181C8B;
-    text-align: center;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -199,30 +198,6 @@ th {
 }
 
 /* Style du dashboard de l'utilisateur */
-.navbar {
-    text-align: center;
-}
-
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-}
-
-.navbar ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-.navbar ul li:last-child {
-    margin-right: 0;
-}
-
-.navbar ul li a .button {
-    text-decoration: none;
-}
-
 .user-info-section {
     width: 100%;
     display: flex;
@@ -277,53 +252,13 @@ th {
     .user-info-container p {
         font-size: 16px;
     }
-
-    .navbar ul {
-        flex-direction: column;
-    }
-
-    .navbar .button {
-        max-width: 100%;
-    }
 }
 
 /* Style des cards de formation pour lesquelles 
         l'utilisateur peut postuler  */
 
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
 .card {
-    width: 25%;
-    background-color: #181C8B;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 20px 10px;
-    display: flex;
-    flex-direction: row;
-}
-
-.card-body {
-    padding: 16px;
-    color: #fefefe;
-}
-
-.card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #fefefe;
-    display: flex;
-    text-align: center;
-}
-
-.card-text {
-    font-size: 14px;
+    background: #181C8B;
     color: #fefefe;
 }
 
@@ -339,153 +274,4 @@ th {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-/* Responsive de la page des formations que peut voir l'utilisateur */
-@media (max-width: 576px) {
-    .card {
-        width: 50%;
-    }
-}
-
-/* Style de la page des documents à fournir pour postuler dans une formation */
-.document-list ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.document-list li {
-    background: #ffffff;
-    margin: 10px 0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.container-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.document-item {
-    background: #ffffff;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    text-align: center;
-}
-
-.document-item h2 {
-    color: #181C8B;
-}
-
-.document-description {
-    margin-top: 10px;
-}
-
-/* Responsive pour la page des documents à fournir0
-             pour la formation */
-@media screen and (max-width: 576px) {
-    .card {
-        max-width: 100%;
-        margin: 20px auto;
-    }
-}
-
-/* Style du formulaire pour déclarer une absence 
-        pour un utilisateur */
-.form-absence {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.dropzone {
-    margin-top: 20px;
-    padding: 20px;
-    width: 400px;
-    height: 200px;
-    border: 2px dashed #cccccc;
-    text-align: center;
-    line-height: 160px;
-    margin-bottom: 10px;
-}
-
-/* Responsive de la page absence pour les utilisateurs */
-@media (max-width: 576px) {
-    .form-absence {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .form-absence div {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .form-absence label {
-        margin-bottom: 5px;
-    }
-
-    .form-absence input,
-    .form-absence button {
-        width: 100%;
-    }
-
-    .dropzone {
-        width: 100%;
-        height: 120px;
-        line-height: 80px;
-        padding: 10px;
-    }
-}
-
-/* Media Query du tableau de bord du responsable administratif */
-@media (max-width: 576px) {
-    .button-container {
-        text-align: center;
-    }
-
-    .table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    .table thead {
-        display: none;
-    }
-
-    .table tr {
-        display: block;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        padding: 10px;
-    }
-
-    .table td {
-        display: block;
-        text-align: right;
-        border: none;
-        padding: 5px 10px;
-        position: relative;
-    }
-
-    .table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        font-weight: bold;
-        text-align: left;
-    }
-
-    .table td:last-child {
-        border-bottom: 1px solid #ddd;
-    }
 }
