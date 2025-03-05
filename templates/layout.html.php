@@ -31,7 +31,7 @@
     <footer class="py-3">
         <div class="row">
             <div class="col-md-4">
-                <div>
+                <div class="logo">
                     <img src="../assets/image/logo.svg" alt="logo de Formul'Air">
                 </div>
             </div>

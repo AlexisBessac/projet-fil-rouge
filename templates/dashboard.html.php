@@ -16,13 +16,14 @@
             </li>
         </ul>
     </nav>
-    <section class="user-info-section container my-4">
-        <div class="user-info-container">
-            <h2>Informations Personnelles :</h2>
-            <p>Bienvenue <span class="user-detail"><?= $user['prenom']; ?> <?= $user['nom']; ?></span></p>
-            <p>Mail : <span class="user-detail"><?= $user['email']; ?></span></p>
-            <p>Numéro de téléphone : <span class="user-detail"><?= $user['telephone']; ?></span></p>
-            <p>Adresse : <span class="user-detail"><?= $user['numero']; ?> <?= $user['rue']; ?> <?= $user['code_postal']; ?> <?= $user['ville']; ?></span></p>
+    <section class="container my-4 d-flex justify-content-center align-items-center">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text">Bienvenue <span class="font-weight-bold"><?= htmlspecialchars($user['prenom']); ?> <?= htmlspecialchars($user['nom']); ?></span></p>
+            <p class="card-text">Mail : <span class="font-weight-bold"><?= htmlspecialchars($user['email']); ?></span></p>
+            <p class="card-text">Numéro de téléphone : <span class="font-weight-bold"><?= htmlspecialchars($user['telephone']); ?></span></p>
+            <p class="card-text">Adresse : <span class="font-weight-bold"><?= htmlspecialchars($user['numero']); ?> <?= htmlspecialchars($user['rue']); ?>, <?= htmlspecialchars($user['code_postal']); ?> <?= htmlspecialchars($user['ville']); ?></span></p>
         </div>
-    </section>
+    </div>
+</section>
 </section>

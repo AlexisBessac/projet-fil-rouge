@@ -21,6 +21,10 @@ a {
     text-decoration: none;
 }
 
+.logo{
+    margin-left: 10px;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -60,18 +64,6 @@ footer {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-}
-
-/* Responsive de la page d'accueil */
-@media (max-width: 576px) {
-    .login {
-        width: 100%;
-        font-size: 18px;
-    }
-
-    .punchline p {
-        font-size: 16px;
-    }
 }
 
 /*Style du CRUD*/
@@ -140,63 +132,6 @@ th {
     .container_button input,
     .container_button button {
         margin-bottom: 10px;
-    }
-}
-
-/* Style du dashboard de l'utilisateur */
-.user-info-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.user-info-container {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 500px;
-    width: 100%;
-    text-align: left;
-}
-
-.user-info-container h2 {
-    font-size: 24px;
-    color: #181C8B;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
-
-.user-info-container p {
-    font-size: 18px;
-    color: #181C8B;
-    margin: 10px 0;
-    white-space: nowrap;
-}
-
-.user-detail {
-    font-weight: bold;
-    color: #181C8B;
-}
-
-/* Responsive du dashboard de l'utilisateur */
-@media (max-width: 576px) {
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    .user-info-container h2 {
-        font-size: 20px;
-    }
-
-    .user-info-container p {
-        font-size: 16px;
     }
 }
 
