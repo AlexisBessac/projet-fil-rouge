@@ -34,7 +34,7 @@
                             <a href="/?page=edit-lesson&id=<?= htmlspecialchars($lessons['id_formation']) ?>" class="btn button" title="Modifier">Modifier</a>
                         </td>
                         <td>
-                            <form action="/?page=delete-lesson" method="POST" onsubmit="return confirm('Are you sure ?')">
+                            <form action="/?page=delete-lesson" method="POST" onsubmit="return confirm('Etes vous sûr de vouloir supprimer cette formation ?')">
                                 <input type="hidden" name="lesson_id" value="<?= htmlspecialchars($lessons['id_formation']) ?>" />
                                 <button class="btn btn-danger" type="submit" title="Supprimer">Supprimer</button>
                             </form>
