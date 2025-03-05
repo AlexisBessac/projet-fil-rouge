@@ -88,13 +88,13 @@
                     <div class="d-block invalid-feedback"><?= htmlspecialchars($errors['password']) ?></div>
                 <?php endif; ?>
             </div>
-            <div class="form-grou pmb-3">
+            <div class="form-group mb-3">
                 <div class="col-12">
                     <label for="role_id" class="form-label">Role de l'utilisateur</label>
                     <?php foreach ($roles as $role) : ?>
-                        <div>
-                            <label for="role_id_<?= htmlspecialchars($role['Id_role']) ?>" class="form-check-label"><?= htmlspecialchars($role['nom_role']) ?></label>
+                        <div class="form-check">
                             <input type="radio" class="form-check-input" name="role_id" id="role_id_<?= htmlspecialchars($role['Id_role']) ?>" value="<?= htmlspecialchars($role['Id_role']) ?>" required>
+                            <label for="role_id_<?= htmlspecialchars($role['Id_role']) ?>" class="form-check-label"><?= htmlspecialchars($role['nom_role']) ?></label>
                         </div>
                     <?php endforeach; ?>
                     <?php if (isset($errors) && !empty($errors['role_id'])) : ?>
