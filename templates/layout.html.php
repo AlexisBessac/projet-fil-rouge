@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <header class="header"> 
+    <header class="header py-3"> 
         <div class="logo">
             <img src="../assets/image/logo.svg" alt="Logo de Formul'Air">
         </div>
@@ -28,7 +28,7 @@
         <?php require '../templates/' . $page . '.html.php'; ?>
     </main>
     
-    <footer>
+    <footer class="py-3">
         <div class="row">
             <div class="col-md-4">
                 <div>

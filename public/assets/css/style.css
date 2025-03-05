@@ -75,16 +75,6 @@ footer {
 }
 
 /*Style du CRUD*/
-.lesson {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    margin-bottom: 10px;
-    background-color: #181C8B;
-    color: #fefefe;
-    cursor: pointer;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -113,24 +103,8 @@ th {
     padding-bottom: 10px;
 }
 
-.ajout-button {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
 .cancel-button {
     margin-top: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.edit_user_button {
-    display: block;
-    background-color: #181C8B;
-    color: #fefefe;
-    width: 90%;
     margin-bottom: 10px;
     cursor: pointer;
 }
