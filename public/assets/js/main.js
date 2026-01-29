@@ -1,40 +1,73 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     function verifierMotsDePasse(password, password2) {
-//         if (password.length !== password2.length || password.length < 12 || password.length > 24) {
-//             return "Les deux mots de passe n'ont pas la même longueur ou la longueur n'est pas entre 12 et 24 caractères";
-//         }
-//         return "";
-//     }
+// Vérification de l'existence de l'email en temps réel
+document.addEventListener('DOMContentLoaded', function() {
+    const emailInput = document.getElementById('email_register');
+    const emailFeedback = document.getElementById('email_feedback');
+    const form = document.querySelector('form');
+    
+    // Variable pour tracker l'état de validation de l'email
+    let emailExists = false;
 
-//     // Le contrôle se fera sur le clic du bouton submit
-//     let btn_submit = document.querySelector("#form_inscribe_submit");
+    if (emailInput && emailFeedback) {
+        // Événement blur - quand l'utilisateur quitte le champ
+        emailInput.addEventListener('blur', function() {
+            const email = this.value.trim();
+            
+            // Si le champ est vide, réinitialiser
+            if (email === '') {
+                emailFeedback.innerHTML = '';
+                emailInput.classList.remove('is-invalid');
+                emailExists = false;
+                return;
+            }
+            
+            // Validation du format email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailFeedback.innerHTML = '<span class="text-warning">⚠️ Format d\'email invalide</span>';
+                emailExists = false;
+                return;
+            }
+            
+            // Afficher un message de chargement
+            emailFeedback.innerHTML = '<span class="text-info">⏳ Vérification en cours...</span>';
+            
+            // Requête AJAX pour vérifier l'email
+            fetch('/?page=check-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'email=' + encodeURIComponent(email)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.exists) {
+                    emailFeedback.innerHTML = '<span class="text-danger">❌ Cet email existe déjà</span>';
+                    emailInput.classList.add('is-invalid');
+                    emailExists = true;
+                } else {
+                    emailFeedback.innerHTML = '<span class="text-success">✅ Email disponible</span>';
+                    emailInput.classList.remove('is-invalid');
+                    emailExists = false;
+                }
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                emailFeedback.innerHTML = '<span class="text-danger">❌ Erreur lors de la vérification</span>';
+            });
+        });
+    }
 
-//     // Vérifier si l'élément existe avant d'ajouter l'écouteur d'événement
-//     if (btn_submit) {
-//         // Ajouter l'écoute de l'événement
-//         btn_submit.addEventListener("click", function(e) {
-//             e.preventDefault();
-
-//             // Contrôler que les deux mots de passe sont identiques
-//             let pw1 = document.querySelector("#password").value;
-//             let pw2 = document.querySelector("#password2").value;
-//             let alerte2 = document.querySelector("#alerte2");
-
-//             if (pw1 === pw2) {
-//                 console.log("identique");
-//                 // Se débrouiller pour valider le formulaire
-//                 document.querySelector("#form-register").submit();
-//             } else {
-//                 console.log("different");
-//                 // Afficher un petit message
-//                 alerte2.innerHTML = "Vos deux mots de passe sont différents";
-
-//                 // Vérifier la longueur des mots de passe
-//                 let resultat = verifierMotsDePasse(pw1, pw2);
-//                 if (resultat !== "") {
-//                     alerte2.innerHTML += "<br>" + resultat;
-//                 }
-//             }
-//         });
-//     }
-// });
+    // Validation au submit du formulaire
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            // Si l'email existe déjà, bloquer l'envoi (sans afficher de message)
+            if (emailExists) {
+                e.preventDefault();
+                emailInput.classList.add('is-invalid');
+                emailInput.focus();
+                return false;
+            }
+        });
+    }
+});

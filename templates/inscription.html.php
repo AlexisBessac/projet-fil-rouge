@@ -2,7 +2,10 @@
     <div class="my-4">
         <h1 class="text-center">S'inscrire</h1>
     </div>
-    <form action="" method="POST" class="my-4">
+    <div class="my-4">
+        <a href="/?page=home"><button class="button cancel-button" title="Revenir à l'accueil">Revenir à l'accueil</button></a>
+    </div>
+    <form action="" method="POST" class="my-4" >
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group mb-3">
@@ -74,6 +77,7 @@
             <div class="form-group mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" name="email_register" id="email_register" placeholder="Ex. john.doe@domaine.com" required>
+                <div id="email_feedback" class="mt-2"></div>
                 <?php if (isset($errors) && !empty($errors['email_register'])) : ?>
                     <div class="d-block invalid-feedback"><?= htmlspecialchars($errors['email_register']) ?></div>
                 <?php endif; ?>

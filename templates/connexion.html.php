@@ -1,5 +1,8 @@
 <section class="container py-5">
     <h1 class="text-center my-4">Se Connecter</h1>
+    <div class="my-4">
+        <a href="/?page=home"><button class="button cancel-button" title="Revenir à l'accueil">Revenir à l'accueil</button></a>
+    </div>
     <form action="" method="POST" class="my-4 d-flex flex-column align-items-center">
         <div class="form-group mb-3">
             <label for="email" class="form-label">Email</label>
