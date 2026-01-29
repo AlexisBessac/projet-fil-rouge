@@ -3,10 +3,17 @@
 $title = "Se Connecter";
 $description = "Page de connexion à Formul'Air";
 
+// Initialiser les variables de formulaire pour la préservation des données
+$form_data = [];
+$errors = [];
+
 // Vérifie que le formulaire a bien été envoyé
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_login']))
 {
-    $errors = [];
+    // Préserver les données du formulaire
+    $form_data = [
+        'email' => $_POST['email'] ?? '',
+    ];
 
     if(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
     {

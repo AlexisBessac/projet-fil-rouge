@@ -2,10 +2,24 @@
 
 require '../src/pages/role.php';
 
+// Initialiser les variables de formulaire pour la préservation des données
+$form_data = [];
+$errors = [];
+
 // Vérification de l'envoi du formulaire et des champs
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_inscribe_submit'])) 
 {
-    $errors = [];
+    // Préserver les données du formulaire
+    $form_data = [
+        'firstname' => $_POST['firstname'] ?? '',
+        'lastname' => $_POST['lastname'] ?? '',
+        'email_register' => $_POST['email_register'] ?? '',
+        'phone_number' => $_POST['phone_number'] ?? '',
+        'street_number' => $_POST['street_number'] ?? '',
+        'street' => $_POST['street'] ?? '',
+        'zip_code' => $_POST['zip_code'] ?? '',
+        'city' => $_POST['city'] ?? '',
+    ];
 
     if (empty($_POST['firstname']) || strlen($_POST['firstname']) <= 1) 
     {
