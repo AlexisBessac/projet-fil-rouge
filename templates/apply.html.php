@@ -1,7 +1,7 @@
 <section class="container py-5">
     <h1 class="text-center my-4">Liste des documents à fournir pour cette formation</h1>
     <div class="my-4">
-        <a href="/?page=dashboard"><button class="button">Revenir sur mon tableau de bord</button></a>
+        <a href="/?page=home"><button class="button" title="Revenir à l'accueil">Revenir à l'accueil</button></a>
     </div>
     <div class="my-4">
         <p class="text-user">Veuillez préparer les documents suivants pour compléter votre inscription à la formation : </p>

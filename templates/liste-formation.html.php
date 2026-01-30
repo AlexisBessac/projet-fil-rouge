@@ -1,7 +1,7 @@
 <section class="container">
     <h1 class="text-center my-4">Liste des Formations</h1>
     <div class="my-4">
-        <a href="/?page=dashboard"><button class="button" title="Revenir sur mon tableau de bord">Revenir sur mon tableau de bord</button></a>
+        <a href="/?page=home"><button class="button" title="Revenir à l'accueil">Revenir à l'accueil</button></a>
     </div>
     <div class="row">
         <?php foreach ($lesson as $lessons) : ?>

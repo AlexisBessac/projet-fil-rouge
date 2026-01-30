@@ -6,9 +6,6 @@
     <nav class="navbar navbar-expand-lg navbar-light my-4 justify-content-center">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="/?page=liste-formation"><button class="button" title="Postuler à une formation">Postuler à une formation</button></a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="/?page=absence-user"><button class="button" title="Déclarer une absence">Déclarer une absence</button></a>
             </li>
             <li class="nav-item">
