@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (emailInput && emailFeedback) {
         // Événement blur - quand l'utilisateur quitte le champ
-        emailInput.addEventListener('blur', function () {
+        emailInput.addEventListener('focusout', function () {
             const email = this.value.trim();
 
             // Requête AJAX pour vérifier l'email (sans afficher de message)

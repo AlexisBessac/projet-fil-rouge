@@ -103,7 +103,7 @@
                 <input type="password" class="form-control <?php if (isset($errors['password'])) echo 'is-invalid'; ?>" name="password" id="password" required>
                 <span>Votre mot de passe doit contenir entre 16 et 32 caractères, une minuscule, une majuscule, un chiffre et un caractère spécial tel que (!,$,€,*).</span>
                 <?php if (isset($errors) && !empty($errors['password'])) : ?>
-                    <div class="d-block invalid-feedback"><?= htmlspecialchars($errors['password']) ?></div>
+                    < class="d-block invalid-feedback"><?= htmlspecialchars($errors['password']) ?></>
                 <?php endif; ?>
             </div>
         </div>
@@ -113,4 +113,4 @@
             </div>
         </div>
     </form>
-</section>
+</section>div
